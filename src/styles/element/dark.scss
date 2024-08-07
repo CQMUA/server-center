@@ -8,8 +8,8 @@ $--colors: (
 
 @forward "element-plus/theme-chalk/src/dark/var.scss" with (
     $bg-color: (
-    'page': #10111F,
-    '': rgb(16,17,31),
-    'overlay': #10111F,
+    'page': #353131,
+    '': rgb(53,49,49),
+    'overlay': #46464e,
   )
 );

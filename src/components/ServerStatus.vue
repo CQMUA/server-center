@@ -1,14 +1,14 @@
 <template>
-  <p class="text-center demonstration">Card Vertical Layout</p>
+  <p class="text-center demonstration">当前在线服务器</p>
   <el-carousel
-      height="400px"
-      direction="vertical"
+
+      direction="horizontal"
       type="card"
       :autoplay="true"
   >
     <el-carousel-item v-for="server in servers" :key="server.id">
-      <a :href="server.url" :title="server.title">
-        <img :src="server.banner" :alt="server.title" width="60%" height="auto"/>
+      <a :href="server.url" :title="server.title" target="_blank">
+        <img :src="server.banner" :alt="server.title" width="auto" height="60%"/>
       </a>
     </el-carousel-item>
   </el-carousel>
