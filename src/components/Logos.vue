@@ -24,10 +24,10 @@
 .tooltip {
   visibility: hidden;
   width: 120px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px;
   position: absolute;
   z-index: 1;

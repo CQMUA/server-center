@@ -1,0 +1,138 @@
+[
+  {
+    "id": "SJTU",
+    "name": "上海交通大学",
+    "community": "SJMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/01/mcclub_%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF-300x300.png",
+    "avatar_university": "https://upload.wikimedia.org/wikipedia/zh/thumb/d/d5/SJTU_emblem.svg/400px-SJTU_emblem.svg.png",
+    "link": "https://mc.sjtu.cn/"
+  },
+  {
+    "id": "NJU",
+    "name": "南京大学",
+    "community": "NJU",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/01/b6b9c5d1b3f4e39978dd0d5e2949bb7953611c1b.jpg",
+    "avatar_university": "https://img.sogoucdn.com/v2/thumb/crop/xy/ai/x/0/y/0/w/132/h/132/iw/30/ih/30/t/0/ir/3/retype_exclude_gif/ext/auto/q/80?t=2&appid=201115&url=https%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F6611%2Fcut-20210713155323-1750234654_jpg_427_536_36877.jpg%2F300",
+    "link": "https://wiki.nmo.net.cn/"
+  },
+  {
+    "id": "NPUCRAFT",
+    "name": "西北工业大学Minecraft创作协会",
+    "community": "NPUCRAFT",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/01/600px-NPUcraft-300x291.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/140"
+  },
+  {
+    "id": "FDCRAFT",
+    "name": "复旦大学基岩社",
+    "community": "FDCRAFT",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/04/%E5%A4%8D%E6%97%A6-300x300.jpg",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/414"
+  },
+  {
+    "id": "ZJUTMC",
+    "name": "浙江工业大学MC方块社",
+    "community": "zjutmc",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/04/ZJUT_MC_LOGO_小图标-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2023/04/ZJUT_MC_LOGO_小图标-300x300.png"
+  },
+  {
+    "id": "BCL",
+    "name": "东南大学六朝松信标社",
+    "community": "BCL",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/01/e0bedcf698b6720dc1b847b1d102859c9d568364.jpg",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2023/01/e0bedcf698b6720dc1b847b1d102859c9d568364.jpg"
+  },
+  {
+    "id": "DUTCRAFT",
+    "name": "大连理工大学Minecraft社",
+    "community": "DUTCRAFT",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/04/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5.jpg",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/892"
+  },
+  {
+    "id": "SDTBUcraft",
+    "name": "山东工商学院Minecraft煤炭社",
+    "community": "SDTBUcraft",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/10/STDBUcraft-cyan-bg-w-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/463"
+  },
+  {
+    "id": "SJZUMC",
+    "name": "沈阳建筑大学筑方MC社",
+    "community": "SJZUMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/05/沈阳建筑大学-1-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/498"
+  },
+  {
+    "id": "SZTUMC",
+    "name": "深圳技术大学Minecraft社",
+    "community": "SZTUMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/08/logov3-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/925"
+  },
+  {
+    "id": "SUESMC",
+    "name": "上海工程技术大学程园我的世界同好会",
+    "community": "SUESMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/09/IMG_20230921_232209-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/archives/577"
+  },
+  {
+    "id": "XAUATcraft",
+    "name": "西安建筑科技大学仙建世界协会",
+    "community": "XAUATcraft",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/12/西安建筑科技大学-300x300.jpg",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2023/12/西安建筑科技大学-300x300.jpg"
+  },
+  {
+    "id": "XSUcraft",
+    "name": "西安石油大学烯煜工艺公社",
+    "community": "XSUcraft",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2024/04/烯煜工艺终透明.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2024/04/烯煜工艺终透明.png"
+  },
+  {
+    "id": "NCWUMC",
+    "name": "华北水利水电大学画梦方块社",
+    "community": "NCWUMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2024/04/NCMCnormal外圈版本-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2024/04/NCMCnormal外圈版本-300x300.png"
+  },
+  {
+    "id": "HDUART",
+    "name": "邯郸学院第九艺术游戏开发社",
+    "community": "HDUART",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2024/04/邯郸学院.jpeg",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2024/04/邯郸学院.jpeg"
+  },
+  {
+    "id": "ZJUT_MINECRAFT",
+    "name": "中国矿业大学（北京）Minecraft社",
+    "community": "ZJUT_MINECRAFT",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2024/03/c579a9ff597cb636dcd7c10842531653-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2024/03/c579a9ff597cb636dcd7c10842531653-300x300.png"
+  },
+  {
+    "id": "SWPUMC",
+    "name": "西南石油大学Minecraft萤石社",
+    "community": "SWPUMC",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2024/02/校徽mc-300x300.png",
+    "avatar_university": "",
+    "link": "https://www.mualliance.cn/wp-content/uploads/2024/02/校徽mc-300x300.png"
+  }
+]

@@ -1,17 +1,21 @@
 <template>
   <p class="text-center demonstration">当前在线服务器</p>
   <el-carousel
-
-      direction="horizontal"
+      :direction="isMobileOrTablet ? 'vertical' : 'horizontal'"
       type="card"
       :autoplay="true"
   >
     <el-carousel-item v-for="server in servers" :key="server.id">
       <a :href="server.url" :title="server.title" target="_blank">
-        <img :src="server.banner" :alt="server.title" width="auto" height="60%"/>
+        <img :src="server.banner" :alt="server.title" width="auto" height="auto"/>
       </a>
     </el-carousel-item>
   </el-carousel>
+  <p>
+    2024
+    <el-link :icon="Position" type="primary" >项导工作室</el-link>
+    版权所有
+  </p>
 </template>
 
 <style scoped>
@@ -23,16 +27,17 @@
   text-align: center;
 }
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+@media (max-width: 768px) {
+  .el-carousel__item {
+    height: 200px;
+  }
 }
 </style>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import {Position} from "@element-plus/icons-vue";
+
 const servers = [
   {
     id: 1,
@@ -54,9 +59,14 @@ const servers = [
   },
   {
     id: 4,
-    title: 'complex',
+    title: 'Complex',
     url: 'https://minecraftlist.com/servers/org.mc-complex.com',
     banner: 'https://minecraftlist.com/servers/org.mc-complex.com/banner@2x.jpg'
   }
 ];
+
+// Computed property to determine if the device is mobile or tablet
+const isMobileOrTablet = computed(() => {
+  return window.innerWidth <= 768; // Adjust the breakpoint as needed
+});
 </script>
