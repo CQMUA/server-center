@@ -6,7 +6,7 @@
       <div w="full" py="4">
         <Logos my="4" />
         <SingleSiteServer></SingleSiteServer>
-        <HelloWorld msg="CYMC 服务中心(更新中，腐竹很懒ovo)" />
+        <HelloWorld msg="CYMC 服务器中心(更新中，腐竹很懒ovo)" />
 
       </div>
 
@@ -19,13 +19,11 @@
 <style>
 #app {
   text-align: center;
-  color: var(--ep-text-color-primary);
 }
 
 .main-container {
-  height: calc(100vh - var(--ep-menu-item-height) - 3px);
+  height: calc(100vh - 3px);
 }
 </style>
 <script setup lang="ts">
-import ServerStatus from "~/components/ServerStatus.vue";
 </script>
