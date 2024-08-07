@@ -6,7 +6,7 @@
       <div w="full" py="4">
         <Logos my="4" />
         <SingleSiteServer></SingleSiteServer>
-        <HelloWorld msg="CYMC 服务器" />
+        <HelloWorld msg="CYMC 服务中心(更新中，腐竹很懒)" />
 
       </div>
 
