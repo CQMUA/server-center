@@ -51,7 +51,7 @@ const value1 = ref(true);
     <el-switch
       v-model="value1"
       class="m-2"
-      style="--ep-switch-on-color: black; --ep-switch-off-color: gray;"
+      style="--ep-switch-on-color: #dc4f4f; --ep-switch-off-color: gray;"
     />
   </div>
 
@@ -90,6 +90,7 @@ const value1 = ref(true);
       >unplugin-element-plus/examples/vite</a
     >
   </p>
+  <a-icon type="copyright" />
 </template>
 
 <style>

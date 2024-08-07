@@ -5,10 +5,15 @@
       <BaseSide />
       <div w="full" py="4">
         <Logos my="4" />
-        <HelloWorld msg="Hello Vue 3 + Element Plus + Vite" />
+        <SingleSiteServer></SingleSiteServer>
+        <HelloWorld msg="CYMC 服务器" />
+
       </div>
+
     </div>
+
   </el-config-provider>
+
 </template>
 
 <style>
@@ -21,3 +26,6 @@
   height: calc(100vh - var(--ep-menu-item-height) - 3px);
 }
 </style>
+<script setup lang="ts">
+import ServerStatus from "~/components/ServerStatus.vue";
+</script>

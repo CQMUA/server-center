@@ -12,3 +12,8 @@ package-lock.json
 pnpm-lock.yaml
 
 *.log
+/.vscode/
+/.github/
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/element-plus-vite-starter.iml
