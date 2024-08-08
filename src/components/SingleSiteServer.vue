@@ -99,6 +99,7 @@ export default {
       loading: true,
       intervalId: null,
       serverList: [
+        'play.purpleprison.net',
         'play.jackpotmc.com',
         'lobby.mualliance.ltd',
         'csu-mc.org',
