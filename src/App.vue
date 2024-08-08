@@ -3,7 +3,7 @@
     <BaseHeader/>
     <div class="flex main-container">
       <div w="full" py="4">
-
+        <HelloWorld msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
         <Logos my="4"/>
         <el-divider>
           这是分割线
@@ -19,7 +19,7 @@
         <el-divider>
           这是分割线
         </el-divider>
-        <HelloWorld msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
+
         <el-divider>
           这是分割线
         </el-divider>
@@ -50,10 +50,12 @@
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 1em
 }
 
 .muaservers-item {
-  animation: fadeInOut 3s linear infinite; /* 应用动画 */
+  animation: fadeInOut 3s linear infinite;
 }
 
 /* 定义动画 */
@@ -91,7 +93,7 @@ const serverIds = [
   'HDUART',
   'ZJUT_MINECRAFT',
   'SWPUMC',
-  'PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder',
+  'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
 
 ];
 

@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
+    CYMCServerStatus: typeof import('./components/CYMCServerStatus.vue')['default']
     ElAnchorLink: typeof import('element-plus/es')['ElAnchorLink']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
@@ -36,10 +37,14 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     Head: typeof import('./components/Head.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    InfiniteScroll: typeof import('./components/DataDisplay/InfiniteScroll.vue')['default']
     Logos: typeof import('./components/Logos.vue')['default']
     MUAServers: typeof import('./components/MUAServers.vue')['default']
     ServerStatistic: typeof import('./components/ServerStatistic.vue')['default']
     ServerStatus: typeof import('./components/ServerStatus.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
+  }
+  export interface ComponentCustomProperties {
+    vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']
   }
 }

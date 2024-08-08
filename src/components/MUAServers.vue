@@ -1,5 +1,5 @@
 <template>
-  <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = false">
+  <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = true">
     <el-popover
         width="auto"
         popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
@@ -41,14 +41,17 @@
               }}
             </el-link>
           </p>
-          <el-divider></el-divider>
+
         </div>
+        <el-divider>在线服务器</el-divider>
+<!--        <InfiniteScroll></InfiniteScroll>-->
+        <SingleSiteServer></SingleSiteServer>
       </template>
     </el-popover>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { ref, defineProps, computed } from 'vue';
 import { Link } from "@element-plus/icons-vue";
 
@@ -66,7 +69,10 @@ const serverInfo = [
     community: 'SJMC',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/mcclub_%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d5/SJTU_emblem.svg/400px-SJTU_emblem.svg.png',
-    link: 'https://mc.sjtu.cn/'
+    link: 'https://mc.sjtu.cn/',
+    servers: [{
+       name: ''
+    }]
   },
   {
     id: 'NJU',
