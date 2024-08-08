@@ -64,7 +64,7 @@ export default {
   methods: {
     async fetchServerStatus() {
       try {
-        const response = await axios.get('https://api.mcstatus.io/v2/status/java/c.club');
+        const response = await axios.get('https://api.mcstatus.io/v2/status/java/mc.fjmua.cn');
         this.serverData = response.data;
       } catch (error) {
         console.error('Error fetching server status:', error);
@@ -84,7 +84,7 @@ export default {
   border-radius: 8px;
   padding: 8px;
   background-color: var(--el-button-disabled-bg-color);
-  max-width: 800px;
+  max-width: 500px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   box-shadow: 0px 0px 1em 1px rgba(85, 166, 201, 0.25);
@@ -111,7 +111,9 @@ export default {
   font-weight: bold;
   font-family: "JetBrains Mono NL Thin", emoji;
   justify-content: center;
-  margin-left: 1em;
+  margin-left: 0.5em;
+  text-align: -moz-center;
+  word-wrap: break-word;
 }
 
 .body {
@@ -128,6 +130,8 @@ export default {
 
 .server-info {
   flex-grow: 1;
+  text-align: center; /* 居中对齐 */
+  word-wrap: break-word; /* 超出时换行 */
 }
 
 .server-motd {
