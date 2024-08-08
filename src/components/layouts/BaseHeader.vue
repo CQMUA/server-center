@@ -50,7 +50,6 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
     <el-menu-item h="full" @click="toggleDark()" class="rm">
       <button
           class="border-none w-full bg-transparent cursor-pointer"
-          style="height: var(--ep-menu-item-height)"
       >
         <i inline-flex i="dark:ep-moon ep-sunny"/>
       </button>

@@ -26,7 +26,8 @@
           />
         </div>
 
-        <div class="demo-rich-content" style="display: flex; gap: 16px; flex-direction: column; align-items: center; justify-content: center; text-align: center">
+        <div class="demo-rich-content"
+             style="display: flex; gap: 16px; flex-direction: column; align-items: center; justify-content: center; text-align: center">
           <div>
             <p class="demo-rich-content__name" style="margin: 0; font-weight: 500; font-size: large">
               {{ currentServerInfo.name }}
@@ -44,7 +45,7 @@
 
         </div>
         <el-divider>在线服务器</el-divider>
-<!--        <InfiniteScroll></InfiniteScroll>-->
+        <!--        <InfiniteScroll></InfiniteScroll>-->
         <SingleSiteServer></SingleSiteServer>
       </template>
     </el-popover>
@@ -52,8 +53,8 @@
 </template>
 
 <script setup>
-import { ref, defineProps, computed } from 'vue';
-import { Link } from "@element-plus/icons-vue";
+import {ref, defineProps, computed} from 'vue';
+import {Link} from "@element-plus/icons-vue";
 
 const props = defineProps({
   id: {
@@ -70,9 +71,10 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/mcclub_%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d5/SJTU_emblem.svg/400px-SJTU_emblem.svg.png',
     link: 'https://mc.sjtu.cn/',
-    servers: [{
-       name: ''
-    }]
+    servers: {
+      SJMC: 'https://mc.cqmu.online',
+      CQMU: 'https://mc.cqmu.online',
+    }
   },
   {
     id: 'NJU',
@@ -80,7 +82,11 @@ const serverInfo = [
     community: 'NMO',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/b6b9c5d1b3f4e39978dd0d5e2949bb7953611c1b.jpg',
     avatar_university: 'https://img.sogoucdn.com/v2/thumb/crop/xy/ai/x/0/y/0/w/132/h/132/iw/30/ih/30/t/0/ir/3/retype_exclude_gif/ext/auto/q/80?t=2&appid=201115&url=https%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F6611%2Fcut-20210713155323-1750234654_jpg_427_536_36877.jpg%2F300',
-    link: 'https://wiki.nmo.net.cn/'
+    link: 'https://wiki.nmo.net.cn/',
+    servers: {
+      NJU: 'https://mc.cqmu.online',
+      CQMU: 'https://mc.cqmu.online',
+    }
   },
   {
     id: 'NPUCRAFT',

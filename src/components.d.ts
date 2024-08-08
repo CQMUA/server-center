@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
+    Collapse: typeof import('./components/DataDisplay/Collapse.vue')['default']
     CYMCServerStatus: typeof import('./components/CYMCServerStatus.vue')['default']
     ElAnchorLink: typeof import('element-plus/es')['ElAnchorLink']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
@@ -17,6 +18,8 @@ declare module 'vue' {
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElCol: typeof import('element-plus/es')['ElCol']
+    ElCollapse: typeof import('element-plus/es')['ElCollapse']
+    ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ElDescriptions: typeof import('element-plus/es')['ElDescriptions']
