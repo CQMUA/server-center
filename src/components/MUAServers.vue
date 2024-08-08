@@ -1,6 +1,5 @@
 <template>
   <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = false">
-    <!--        改变弹出盒子的宽度-->
     <el-popover
         width="auto"
         popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
@@ -27,8 +26,7 @@
           />
         </div>
 
-        <div class="demo-rich-content"
-             style="display: flex; gap: 16px; flex-direction: column; align-items: center; justify-content: center; text-align: center">
+        <div class="demo-rich-content" style="display: flex; gap: 16px; flex-direction: column; align-items: center; justify-content: center; text-align: center">
           <div>
             <p class="demo-rich-content__name" style="margin: 0; font-weight: 500; font-size: large">
               {{ currentServerInfo.name }}
@@ -51,8 +49,8 @@
 </template>
 
 <script lang="ts" setup>
-import {ref, defineProps, computed} from 'vue';
-import {Link} from "@element-plus/icons-vue";
+import { ref, defineProps, computed } from 'vue';
+import { Link } from "@element-plus/icons-vue";
 
 const props = defineProps({
   id: {
@@ -60,7 +58,6 @@ const props = defineProps({
     required: true
   }
 });
-
 
 const serverInfo = [
   {
@@ -209,7 +206,6 @@ const serverInfo = [
   }
 ];
 
-
 const hover = ref(false);
 const currentServerInfo = computed(() => {
   return serverInfo.find(server => server.id === props.id) || {};
@@ -218,11 +214,14 @@ const currentServerInfo = computed(() => {
 
 <style scoped>
 .muaservers {
-  opacity: 0.5; /* Initial opacity */
-  transition: opacity 0.4s ease;
+  opacity: 0.7;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+  pointer-events: auto;
 }
 
 .muaservers:hover {
-  opacity: 1; /* Full opacity on hover */
+  opacity: 1 !important; /* 保持透明度为 1 */
+  filter: drop-shadow(0 0 3em #6AC8FE);
 }
 </style>
+

@@ -10,8 +10,9 @@
         </el-divider>
 
         <div class="muaservers-container">
-          <template v-for="server in serverIds" :key="server">
-            <MUAServers :id="server" class="muaservers-item"/>
+          <template v-for="(server, index) in serverIds" :key="server">
+            <MUAServers :id="server" :class="['muaservers-item', `delay-${index}`]"
+                        :style="{ animationDelay: `${delays[index]}s` }"/>
           </template>
         </div>
 
@@ -32,6 +33,7 @@
   </el-config-provider>
 </template>
 
+
 <style>
 #app {
   text-align: center;
@@ -43,23 +45,35 @@
 
 .muaservers-container {
   display: flex;
+  width: auto;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  padding: 16px;
-  transition: filter 0.3s;
+  padding: 1em;
 }
 
-.muaservers-item:hover {
-  filter: drop-shadow(0 0 3em #55a6c9);
+.muaservers-item {
+  animation: fadeInOut 3s linear infinite; /* 应用动画 */
 }
+
+/* 定义动画 */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.24;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.24;
+  }
+}
+
 </style>
 
 <script setup lang="ts">
-
 const serverIds = [
   'SJTU',
   'NJU',
@@ -79,6 +93,12 @@ const serverIds = [
   'HDUART',
   'ZJUT_MINECRAFT',
   'SWPUMC',
-
 ];
+
+// 这里控制图标动画时长
+const animationDuration = 4.2;
+const delayIncrement = animationDuration / serverIds.length;
+
+const delays = serverIds.map((_, index) => delayIncrement * index);
 </script>
+
