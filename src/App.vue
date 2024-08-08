@@ -35,9 +35,7 @@
 
 
 <style>
-#app {
-  text-align: center;
-}
+
 
 .main-container {
   height: calc(100vh - 3px);
@@ -61,13 +59,13 @@
 /* 定义动画 */
 @keyframes fadeInOut {
   0% {
-    opacity: 0.24;
+    opacity: 0.3;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.24;
+    opacity: 0.3;
   }
 }
 
@@ -93,10 +91,12 @@ const serverIds = [
   'HDUART',
   'ZJUT_MINECRAFT',
   'SWPUMC',
+  'PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder','PlaceHolder',
+
 ];
 
 // 这里控制图标动画时长
-const animationDuration = 4.2;
+const animationDuration = 2.5;
 const delayIncrement = animationDuration / serverIds.length;
 
 const delays = serverIds.map((_, index) => delayIncrement * index);

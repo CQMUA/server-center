@@ -203,7 +203,16 @@ const serverInfo = [
     avatar: 'https://server.cqmu.online/cymc-logo-dark.png',
     avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
     link: 'https://www.cqmu.online',
+  },
+  {
+    id: 'PlaceHolder',
+    name: '占位符',
+    community: 'MUA',
+    avatar: '#',
+    avatar_university: '#',
+    link: 'https://www.mualliance.cn/',
   }
+
 ];
 
 const hover = ref(false);
