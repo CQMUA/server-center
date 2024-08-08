@@ -1,83 +1,88 @@
 <template>
   <div class="server-status">
-    <div v-if="serverData">
-      <div class="header">
-        <div class="header-left">
-          <el-icon size="20" v-if="serverData.online" color="green">
-            <CircleCheckFilled/>
-          </el-icon>
-          <el-icon v-else color="red">
-            <CircleCloseFilled/>
-          </el-icon>
-          <span class="server-address"> {{ serverData.host }} </span>
-        </div>
-        <div class="player-count" v-if="serverData.online">
-          在线 {{ serverData.players.online }} / {{ serverData.players.max }}
-        </div>
-        <div v-else>
-          <span class="player-count">服务器不在线</span>
-        </div>
-      </div>
-      <div class="body">
-        <el-row gutter="40">
-          <el-col :span="4">
-            <div style="justify-content: center; align-self: center">
-              <img :src="serverIcon" alt="Server Icon" class="server-icon"/>
+    <el-scrollbar max-height="400px">
+      <div v-if="serverData.length">
+        <div v-for="(data, index) in serverData" :key="index" class="server-item">
+          <div class="header">
+            <div class="header-left">
+              <el-icon size="25" v-if="data.online" color="green">
+                <CircleCheckFilled/>
+              </el-icon>
+              <el-icon size="25" v-else color="red">
+                <CircleCloseFilled/>
+              </el-icon>
+              <span class="server-address"> {{ data.host }}:{{ data.port }} </span>
             </div>
-          </el-col>
-          <el-col :span="20">
-            <el-col>
-              <div class="server-info">
-                <div class="server-motd"
-                     v-html="serverData.online ? serverData.motd.html : '服务器不在线，无法显示服务器状态'"></div>
-                <div class="version-motd"
-                     v-html="serverData.online ? serverData.version.name_html : '服务器不在线，无法显示版本信息'"></div>
-              </div>
-              <div class="server-ipv4">IPV4: {{ serverData.ip_address || '无可用 IP 地址' }}</div>
-            </el-col>
-          </el-col>
-        </el-row>
-      </div>
-
-      <div class="MUAServer-collapse">
-        <el-collapse accordion>
-          <el-collapse-item title="模组、插件" name="1">
-            <div>
-              <el-icon ></el-icon>
-              模组：
-            </div>
-            <div>
-              插件：
-            </div>
-          </el-collapse-item>
-          <el-collapse-item title="在线玩家(正版UUID查询，仅供参考)" name="2">
-            <div class="server-players" v-if="serverData.online">
-              <ol class="flex flex-wrap gap-2 mt-3 list-none">
-                <li v-for="player in serverData.players.list" :key="player.uuid">
-                  <a :href="`https://minecraftuuid.com/?search=${player.uuid}`" rel="sponsored"
-                     class="flex items-center gap-3 px-3 py-2 card card-hover">
-                    <img loading="lazy"
-                         width="24"
-                         height="24"
-                         decoding="async"
-                         :src="`https://api.mineatar.io/head/${player.uuid}`"
-                         style="color: transparent;"/>
-                    <span class="font-mono text-sm" v-html="player.name_html" v-if="player.name_html"></span>
-                  </a>
-                </li>
-              </ol>
+            <div class="player-count" v-if="data.online">
+              在线 {{ data.players.online }} / {{ data.players.max }}
             </div>
             <div v-else>
-              <p>服务器不在线，无法显示在线玩家信息。</p>
+              <span class="player-count">服务器不在线</span>
             </div>
-          </el-collapse-item>
+          </div>
+          <div class="body">
+            <el-row gutter="40">
+              <el-col :span="4">
+                <div style="justify-content: center; align-self: center">
+                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon"/>
+                </div>
+              </el-col>
+              <el-col :span="20">
+                <el-col>
+                  <div class="server-info">
+                    <div class="server-motd"
+                         v-html="data.online ? data.motd.html : '服务器不在线，无法显示服务器状态'"></div>
+                    <div class="version-motd"
+                         v-html="data.online ? data.version.name_html : '服务器不在线，无法显示版本信息'"></div>
+                  </div>
+                  <div class="server-ipv4">IPV4: {{ data.ip_address || '无可用 IP 地址' }}</div>
+                </el-col>
+              </el-col>
+            </el-row>
+          </div>
 
-        </el-collapse>
+          <div class="MUAServer-collapse">
+            <el-collapse accordion>
+              <el-collapse-item title="模组、插件" name="1">
+                <div>
+                  <el-icon></el-icon>
+                  模组：
+                </div>
+                <div>
+                  插件：
+                </div>
+              </el-collapse-item>
+              <el-collapse-item title="在线玩家(正版UUID查询，仅供参考)" name="2">
+                <div class="server-players" v-if="data.online">
+                  <ol class="flex flex-wrap gap-2 mt-3 list-none">
+                    <li v-for="player in data.players.list" :key="player.uuid">
+                      <a :href="`https://minecraftuuid.com/?search=${player.uuid}`" rel="sponsored"
+                         class="flex items-center gap-3 px-3 py-2 card card-hover">
+                        <img loading="lazy"
+                             width="24"
+                             height="24"
+                             decoding="async"
+                             :src="`https://api.mineatar.io/head/${player.uuid}`"
+                             style="color: transparent;"/>
+                        <span class="font-mono text-sm" v-html="player.name_html" v-if="player.name_html"></span>
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+                <div v-else>
+                  <p>服务器不在线，无法显示在线玩家信息。</p>
+                </div>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
+        </div>
       </div>
-    </div>
-    <div v-else>
-      <p>Loading...</p>
-    </div>
+
+      <div v-else>
+        Minecraft Servers Loading...
+        <el-row v-loading="loading"></el-row>
+      </div>
+    </el-scrollbar>
   </div>
 </template>
 
@@ -90,31 +95,74 @@ export default {
   components: {CircleCloseFilled, CircleCheckFilled},
   data() {
     return {
-      serverData: null,
+      serverData: [],
+      loading: true,
+      intervalId: null,
+      serverList: [
+        'play.jackpotmc.com',
+        'lobby.mualliance.ltd',
+        'csu-mc.org',
+        'mc.fdc.jingyijun.xyz',
+        'mc.fjmua.cn',
+        'gxucraft.cn',
+        'mc.hqucraft.top',
+        'lnu.lightzone.mevisual.top',
+        'mc.npucraft.com',
+        'perm.sdustmc.cn:25565',
+        'union.sitmc.club',
+        'smp2.sjmc.club',
+        'mua.suesmc.ltd',
+        'play.swustmc.fun:25565',
+        'mc.tarucraft.club',
+        'mc.mualliance.cn',
+        'core.xjtumc.com',
+        'union.ysumc.club'
+      ]
     };
-  },
-  computed: {
-    serverIcon() {
-      return this.serverData && this.serverData.icon ? this.serverData.icon : defaultIcon;
-    }
-  },
-  mounted() {
-    this.fetchServerStatus();
   },
   methods: {
     async fetchServerStatus() {
+      this.loading = true;
       try {
-        const response = await axios.get('https://api.mcstatus.io/v2/status/java/mua.suesmc.ltd');
-        this.serverData = response.data;
+        const requests = this.serverList.map(url => axios.get(`https://api.mcstatus.io/v2/status/java/${url}`));
+        const responses = await Promise.all(requests);
+        this.serverData = responses.map(response => response.data);
       } catch (error) {
         console.error('Error fetching server status:', error);
+      } finally {
+        this.loading = false;
       }
     },
+    startFetching() {
+      this.fetchServerStatus();
+      this.intervalId = setInterval(this.fetchServerStatus, 10000);
+    },
+    stopFetching() {
+      clearInterval(this.intervalId);
+    },
+    getServerIcon(data) {
+      return data.icon ? data.icon : defaultIcon;
+    }
+  },
+  mounted() {
+    this.startFetching();
+  },
+  beforeDestroy() {
+    this.stopFetching();
   },
 };
 </script>
 
 <style scoped>
+.server-item {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--el-bg-color);
+  box-shadow: 0 0 1em 1px rgba(0, 0, 0, 0.5);
+}
+
 .server-players {
   padding: 10px;
 }
@@ -161,7 +209,7 @@ export default {
   max-width: 500px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
-  box-shadow: 0px 0px 1em 1px rgba(85, 166, 201, 0.3);
+  box-shadow: 0 0 1em 1px rgba(85, 166, 201, 0.3);
 }
 
 .header {
@@ -174,7 +222,7 @@ export default {
 }
 
 .server-address {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bolder;
   margin-left: 0.8em;
   margin-right: 0.8em;

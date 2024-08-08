@@ -72,8 +72,8 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d5/SJTU_emblem.svg/400px-SJTU_emblem.svg.png',
     link: 'https://mc.sjtu.cn/',
     servers: {
-      SJMC: 'https://mc.cqmu.online',
-      CQMU: 'https://mc.cqmu.online',
+      SJMC: 'mua.suesmc.ltd',
+      Creative: 'creative.sjtu.cn',
     }
   },
   {

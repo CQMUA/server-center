@@ -98,7 +98,7 @@ const serverIds = [
 ];
 
 // 这里控制图标动画时长
-const animationDuration = 2.5;
+const animationDuration = 3;
 const delayIncrement = animationDuration / serverIds.length;
 
 const delays = serverIds.map((_, index) => delayIncrement * index);
