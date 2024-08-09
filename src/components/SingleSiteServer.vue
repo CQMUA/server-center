@@ -1,6 +1,6 @@
 <template>
   <div class="server-status">
-    <el-scrollbar max-height="368px" max-width="fit-content">
+    <el-scrollbar max-height="368px" max-width="fit-content" :always=false>
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
         <p>这个学校或者好像没有服务器哦ovo！</p>
       </div>
