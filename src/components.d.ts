@@ -27,6 +27,7 @@ declare module 'vue' {
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElStatistic: typeof import('element-plus/es')['ElStatistic']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    Footer: typeof import('./components/layouts/Footer.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     InfiniteScroll: typeof import('./components/DataDisplay/InfiniteScroll.vue')['default']
     Logos: typeof import('./components/Logos.vue')['default']

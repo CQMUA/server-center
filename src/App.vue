@@ -39,13 +39,10 @@
         <el-divider>
           这是分割线
         </el-divider>
-
+<Footer></Footer>
       </div>
     </div>
   </el-config-provider>
-<!--  <template>-->
-<!--    <SpeedInsights />-->
-<!--  </template>-->
 
 </template>
 

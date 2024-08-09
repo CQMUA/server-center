@@ -1,7 +1,9 @@
 <template>
   <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = false">
+    <!--    https://element-plus.org/zh-CN/component/popover.html-->
     <el-popover
         :popper-style="popoverStyle"
+        trigger="click"
     >
       <template #reference>
         <el-avatar
@@ -63,8 +65,6 @@ const props = defineProps({
 });
 
 
-
-
 const hover = ref(false);
 const currentServerInfo = computed(() => {
   return serverInfo.find(server => server.id === props.id) || {};
@@ -75,7 +75,7 @@ const popoverStyle = computed(() => {
   let width = window.innerWidth < 768 ? '98vw' : 'fit-content';
   return {
     width: width,
-    maxWidth: '600px', // 最大600px
+    maxWidth: '400px', // 最大600px
     opacity: 0.95,
     boxShadow: 'rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px',
     padding: '20px',
@@ -270,7 +270,7 @@ const serverInfo = [
     id: 'CYMC',
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
-    avatar: "../assets/cymc-logo-dark.png",
+    avatar: "https://raw.githubusercontent.com/MultipledMe/CYMC-MCServers/main/public/cymc.png",
     avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
     link: 'https://www.cqmu.online',
     servers: {
