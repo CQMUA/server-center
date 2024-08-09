@@ -18,3 +18,6 @@ import "element-plus/theme-chalk/src/message.scss";
 const app = createApp(App);
 // app.use(ElementPlus);
 app.mount("#app");
+
+const elementPlusViteStarter = createApp(App);
+elementPlusViteStarter.component("AnotherApp", App);

@@ -2,7 +2,8 @@
   <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = false">
     <el-popover
         width="auto"
-        popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
+        slot="Hello"
+        popper-style="opacity:0.95; width=var(100vw - 20px) ; box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px; backdrop-filter: blur(10px);"
     >
       <template #reference>
         <el-avatar
@@ -125,8 +126,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/04/ZJUT_MC_LOGO_小图标-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/2/20/ZJUT_seal.svg/300px-ZJUT_seal.svg.png',
     link: 'https://zjutmc.club/',
-    servers: {
-    }
+    servers: {}
   },
   {
     id: 'BCL',
@@ -135,8 +135,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/e0bedcf698b6720dc1b847b1d102859c9d568364.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/0/07/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg/400px-%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg.png',
     link: 'https://space.bilibili.com/1377901474',
-    servers: {
-    }
+    servers: {}
   },
   {
     id: 'DUTCRAFT',
@@ -145,8 +144,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/04/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/76/Dalian_University_of_Technology_logo.svg/400px-Dalian_University_of_Technology_logo.svg.png',
     link: 'https://mcweb.unsafe.top/',
-    servers: {
-    }
+    servers: {}
   },
   {
     id: 'SDTBUcraft',
@@ -155,9 +153,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/10/STDBUcraft-cyan-bg-w-300x300.png',
     avatar_university: 'https://img-ph-mirror.nosdn.127.net/qHzzfPZqvg16SPDMAQgdtw==/2189593843932474992.png',
     link: 'https://www.mualliance.cn/archives/463',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'SJZUMC',
@@ -166,9 +162,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/05/沈阳建筑大学-1-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/8/87/%E6%B2%88%E9%98%B3%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6logo.png',
     link: 'https://www.mualliance.cn/archives/498',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'SZTUMC',
@@ -177,9 +171,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/08/logov3-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/2/23/The_logo_of_SZTU.png',
     link: 'https://web.sztumc.top/',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'SUESMC',
@@ -188,9 +180,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/09/IMG_20230921_232209-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/3/30/Shanghai_University_Of_Engineering_Science.png',
     link: 'https://www.mualliance.cn/archives/577',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'XAUATcraft',
@@ -199,9 +189,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/12/西安建筑科技大学-300x300.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/48/%E8%A5%BF%E5%AE%89%E5%BB%BA%E7%AD%91%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.jpg',
     link: 'https://www.xauatcraft.com/',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'XSUcraft',
@@ -210,9 +198,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/04/烯煜工艺终透明.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/c/cf/Xi%27an_Shiyou_University.jpg?20240326092124',
     link: 'https://www.mualliance.cn/archives/2363',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'NCWUMC',
@@ -221,9 +207,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/04/NCMCnormal外圈版本-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/4a/%E5%8D%8E%E5%8C%97%E6%B0%B4%E5%88%A9%E6%B0%B4%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.jpg',
     link: 'https://www.mualliance.cn/archives/587',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'HDUART',
@@ -232,9 +216,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/04/邯郸学院.jpeg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/9/9e/Handan_University_logo.jpg',
     link: 'https://www.mualliance.cn/archives/2323',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'ZJUT_MINECRAFT',
@@ -243,9 +225,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/03/c579a9ff597cb636dcd7c10842531653-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/f/fa/CUMT_logo.jpg',
     link: 'https://www.mualliance.cn/wp-content/uploads/2024/03/c579a9ff597cb636dcd7c10842531653-300x300.png',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'SWPUMC',
@@ -254,9 +234,7 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/02/校徽mc-300x300.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/2/26/Southwest_Petroleum_University_logo.png',
     link: 'https://www.mualliance.cn/wp-content/uploads/2024/02/校徽mc-300x300.png',
-    servers: {
-
-    }
+    servers: {}
   },
   {
     id: 'CYMC',

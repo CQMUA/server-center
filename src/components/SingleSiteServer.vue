@@ -2,32 +2,42 @@
   <div class="server-status">
     <el-scrollbar max-height="400px">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
-        <p>这个学校好像没有服务器哦！</p>
+        <p>这个学校或者好像没有服务器哦ovo！</p>
       </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
           <div class="header">
             <div class="header-left">
-              <el-icon size="25" v-if="data.online" color="green">
-                <CircleCheckFilled/>
+              <el-icon size="30" v-if="data.online" color="green">
+                <CircleCheckFilled />
               </el-icon>
-              <el-icon size="25" v-else color="red">
-                <CircleCloseFilled/>
+              <el-icon size="30" v-else color="red">
+                <CircleCloseFilled />
               </el-icon>
-              <span class="server-address"> {{ data.host }}:{{ data.port }} </span>
-            </div>
-            <div class="player-count" v-if="data.online">
-              在线 {{ data.players.online }} / {{ data.players.max }}
-            </div>
-            <div v-else>
-              <span class="player-count">服务器不在线</span>
+              <div class="copy-box">
+                <span :class="['server-address', { online: data.online }]">
+                  {{ data.host }}:{{ data.port }}
+                  <el-icon
+                      size="18"
+                      :style="{ cursor: data.online ? 'pointer' : 'not-allowed' }"
+                      @click="data.online ? copyToClipboard(data.host, data.port, index) : null"
+                  >
+                    <template v-if="copySuccess[index]">
+                      <Check />
+                    </template>
+                    <template v-else>
+                      <CopyDocument />
+                    </template>
+                  </el-icon>
+                </span>
+              </div>
             </div>
           </div>
           <div class="body">
-            <el-row gutter="40">
+            <el-row gutter="50">
               <el-col :span="4">
                 <div style="justify-content: center; align-self: center">
-                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon"/>
+                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon" />
                 </div>
               </el-col>
               <el-col :span="20">
@@ -35,10 +45,9 @@
                   <div class="server-info">
                     <div class="server-motd"
                          v-html="data.online ? data.motd.html : '服务器不在线，无法显示服务器状态'"></div>
-                    <div class="version-motd"
-                         v-html="data.online ? data.version.name_html : '服务器不在线，无法显示版本信息'"></div>
                   </div>
-                  <div class="server-ipv4">IPV4: {{ data.ip_address || '无可用 IP 地址' }}</div>
+                  <div class="version-motd"
+                       v-html="data.online ? data.version.name_html : '服务器不在线，无法显示版本信息'"></div>
                 </el-col>
               </el-col>
             </el-row>
@@ -49,7 +58,9 @@
                 <div>模组：</div>
                 <div>插件：</div>
               </el-collapse-item>
-              <el-collapse-item title="在线玩家(正版UUID查询，仅供参考)" name="2">
+              <el-collapse-item
+                  :title="`在线玩家(${data.online ? data.players.online : 0} / ${data.online ? data.players.max : 0}) (正版UUID查询，仅供参考)`"
+                  name="2">
                 <div class="server-players" v-if="data.online">
                   <ol class="flex flex-wrap gap-2 mt-3 list-none">
                     <li v-for="player in data.players.list" :key="player.uuid">
@@ -60,7 +71,7 @@
                              height="24"
                              decoding="async"
                              :src="`https://api.mineatar.io/head/${player.uuid}`"
-                             style="color: transparent;"/>
+                             style="color: transparent;"  alt="MCAvatars"/>
                         <span class="font-mono text-sm" v-html="player.name_html" v-if="player.name_html"></span>
                       </a>
                     </li>
@@ -75,7 +86,6 @@
         </div>
       </div>
       <div v-else style="justify-content: center; align-self: center; text-align: center;">
-        Minecraft Servers Status Loading......
         <el-row v-loading="loading"></el-row>
       </div>
     </el-scrollbar>
@@ -83,58 +93,91 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import defaultIcon from '../assets/bingo_cat.gif';
-import {CircleCheckFilled, CircleCloseFilled} from "@element-plus/icons-vue";
+import { CircleCheckFilled, CircleCloseFilled, CopyDocument, Check } from "@element-plus/icons-vue";
+import { ElMessage } from 'element-plus'; // Correct import
 
 export default {
-  components: {CircleCloseFilled, CircleCheckFilled},
+  components: { CopyDocument, Check, CircleCloseFilled, CircleCheckFilled },
   props: {
     servers: {
       type: Object,
       required: true
     }
   },
-  data() {
-    return {
-      serverData: [],
-      loading: true,
-    };
-  },
-  methods: {
-    async fetchServerStatus() {
-      this.loading = true;
+  setup(props) {
+    const serverData = ref([]);
+    const loading = ref(true);
+    const copySuccess = ref({}); // Use ref for reactivity
+
+    const fetchServerStatus = async () => {
+      loading.value = true;
       try {
-        const requests = Object.entries(this.servers).map(([name, address]) => {
+        const requests = Object.entries(props.servers).map(([name, address]) => {
           return axios.get(`https://api.mcstatus.io/v2/status/java/${address}`);
         });
         const responses = await Promise.all(requests);
-        this.serverData = responses.map(response => response.data);
+        serverData.value = responses.map(response => response.data);
       } catch (error) {
         console.error('Error fetching server status:', error);
       } finally {
-        this.loading = false;
+        loading.value = false;
       }
-    },
-    getServerIcon(data) {
+    };
+
+    const getServerIcon = (data) => {
       return data.icon ? data.icon : defaultIcon;
-    }
-  },
-  mounted() {
-    this.fetchServerStatus(); // 初始请求
-  },
+    };
+
+    const copyToClipboard = (host, port, index) => {
+      const textToCopy = `${host}:${port}`;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        copySuccess.value[index] = true;
+        ElMessage.success('地址已复制到剪切板！'); // Use ElMessage directly
+
+        setTimeout(() => {
+          copySuccess.value[index] = false; // Reset after 3 seconds
+        }, 3000);
+      }).catch(err => {
+        console.error('复制失败:', err);
+      });
+    };
+
+    onMounted(() => {
+      fetchServerStatus(); // Initial request
+    });
+
+    return {
+      serverData,
+      loading,
+      copySuccess,
+      fetchServerStatus,
+      getServerIcon,
+      copyToClipboard
+    };
+  }
 };
 </script>
 
-
 <style scoped>
 .server-item {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 10px;
   background-color: var(--el-bg-color);
-  box-shadow: 0 0 1em 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 9px 1em 2px rgba(0, 0, 0, 0.43);
+}
+
+.copy-box {
+  padding: 10px;
+  width: 90%; /* header的90% */
+  height: 90%; /* header的90% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .server-players {
@@ -172,6 +215,8 @@ export default {
 }
 
 .header-left {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -181,11 +226,10 @@ export default {
   padding: 8px;
   background-color: var(--el-bg-color);
   min-width: 350px;
-  max-width: 450px;
+  max-width: 400px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 1em 1px rgba(85, 166, 201, 0.3);
-
 }
 
 .header {
@@ -195,13 +239,19 @@ export default {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 8px;
   margin-bottom: 8px;
+  width: 100%;
 }
 
 .server-address {
+  color: rgb(110, 110, 110); /* 默认颜色 */
   font-size: 1.4em;
   font-weight: bolder;
   margin-left: 0.8em;
   margin-right: 0.8em;
+}
+
+.server-address.online {
+  color: #008000;
 }
 
 .version-motd {
@@ -230,15 +280,15 @@ export default {
 .server-icon {
   width: 64px;
   height: 64px;
-  border-radius: 4px;
-  margin-right: 16px;
-  padding-top: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 4px rgba(85, 166, 201, 0.47);
 }
 
 .server-info {
+  width: 100%;
   flex-grow: 1;
   mix-blend-mode: difference;
-  text-align: -webkit-left;
+  text-align: left;
   word-wrap: break-word;
 }
 
@@ -248,10 +298,8 @@ export default {
 }
 
 .player-count {
-  font-size: 1.2em;
+  font-size: 1em;
   color: rgb(0, 255, 177);
   text-align: right;
 }
-
 </style>
-

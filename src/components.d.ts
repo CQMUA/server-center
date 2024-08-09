@@ -48,6 +48,7 @@ declare module 'vue' {
     ServerStatistic: typeof import('./components/ServerStatistic.vue')['default']
     ServerStatus: typeof import('./components/ServerStatus.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
+    Skeleton: typeof import('./components/Skeleton.vue')['default']
   }
   export interface ComponentCustomProperties {
     vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']

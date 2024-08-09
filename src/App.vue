@@ -50,8 +50,15 @@
 </template>
 
 <style>
+
   .main-container {
-    height: calc(100vh);
+    max-width: calc(100vw - 3px);
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
 .muaservers-container {
@@ -62,9 +69,11 @@
   justify-content: center;
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  padding: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin: 1em;
+  padding-top:  1em;
+  padding-bottom: 1em;
+  padding-left: -2em;
+  margin:0.5em;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .muaservers-item {

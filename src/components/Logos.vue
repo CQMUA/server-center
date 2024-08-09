@@ -22,6 +22,7 @@
 }
 
 .tooltip {
+
   visibility: hidden;
   width: 120px;
   background-color: rgba(0, 0, 0, 0.5);
