@@ -267,7 +267,7 @@ const serverInfo = [
     link: 'https://www.cqmu.online',
     servers: {
       MYCQMU: 'mc.cqmu.online',
-      Test: 's10.s100.vip',
+      Test: 's10.s100.vip:33860',
       Creative: 'dev.cqmu.online',
       HUB: 'hub.cqmu.online',
       MOD: 'mod.cqmu.online',
