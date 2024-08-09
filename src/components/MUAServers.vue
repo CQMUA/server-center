@@ -70,8 +70,13 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d5/SJTU_emblem.svg/400px-SJTU_emblem.svg.png',
     link: 'https://mc.sjtu.cn/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
+      SJMC_HUB: 'hub.sjmc.club',
+      SJMC_SMP: '\t1.19.sjmc.club',
+      SJMC_SMP2: 'smp2.sjmc.club',
       Creative: 'creative.sjtu.cn',
+      SJMC_BUILD: 'build.sjmc.club',
+      SJRedStone: 'redstone.sjmc.club',
+      MUA: 'lobby.mualliance.ltd'
     }
   },
   {
@@ -82,8 +87,11 @@ const serverInfo = [
     avatar_university: 'https://img.sogoucdn.com/v2/thumb/crop/xy/ai/x/0/y/0/w/132/h/132/iw/30/ih/30/t/0/ir/3/retype_exclude_gif/ext/auto/q/80?t=2&appid=201115&url=https%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F6611%2Fcut-20210713155323-1750234654_jpg_427_536_36877.jpg%2F300',
     link: 'https://wiki.nmo.net.cn/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+      Sevtech_Ages: 'mod1.nmo.net.cn:20481',
+      Hypixel: 'hypixel.net',
+      twoB2T: '2b2t.org',
+      SMP2: 'smp2.sjmc.club',
+      SEU_survival: 'mc.sjtu.cn:22626'
     }
   },
   {
