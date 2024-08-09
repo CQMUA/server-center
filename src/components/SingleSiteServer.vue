@@ -1,6 +1,6 @@
 <template>
   <div class="server-status">
-    <el-scrollbar max-height="400px">
+    <el-scrollbar max-height="368px" max-width="fit-content">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
         <p>这个学校或者好像没有服务器哦ovo！</p>
       </div>
@@ -9,10 +9,10 @@
           <div class="header">
             <div class="header-left">
               <el-icon size="30" v-if="data.online" color="green">
-                <CircleCheckFilled />
+                <CircleCheckFilled/>
               </el-icon>
               <el-icon size="30" v-else color="red">
-                <CircleCloseFilled />
+                <CircleCloseFilled/>
               </el-icon>
               <div class="copy-box">
                 <span :class="['server-address', { online: data.online }]">
@@ -23,10 +23,10 @@
                       @click="data.online ? copyToClipboard(data.host, data.port, index) : null"
                   >
                     <template v-if="copySuccess[index]">
-                      <Check />
+                      <Check/>
                     </template>
                     <template v-else>
-                      <CopyDocument />
+                      <CopyDocument/>
                     </template>
                   </el-icon>
                 </span>
@@ -34,10 +34,10 @@
             </div>
           </div>
           <div class="body">
-            <el-row gutter="50">
+            <el-row :gutter="40">
               <el-col :span="4">
                 <div style="justify-content: center; align-self: center">
-                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon" />
+                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon"/>
                 </div>
               </el-col>
               <el-col :span="20">
@@ -71,7 +71,7 @@
                              height="24"
                              decoding="async"
                              :src="`https://api.mineatar.io/head/${player.uuid}`"
-                             style="color: transparent;"  alt="MCAvatars"/>
+                             style="color: transparent;" alt="MCAvatars"/>
                         <span class="font-mono text-sm" v-html="player.name_html" v-if="player.name_html"></span>
                       </a>
                     </li>
@@ -89,18 +89,20 @@
         <el-row v-loading="loading"></el-row>
       </div>
     </el-scrollbar>
+
   </div>
+  <StatusUpdate></StatusUpdate>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import {ref, onMounted} from 'vue';
 import axios from 'axios';
 import defaultIcon from '../assets/bingo_cat.gif';
-import { CircleCheckFilled, CircleCloseFilled, CopyDocument, Check } from "@element-plus/icons-vue";
-import { ElMessage } from 'element-plus'; // Correct import
+import {CircleCheckFilled, CircleCloseFilled, CopyDocument, Check} from "@element-plus/icons-vue";
+import {ElMessage} from 'element-plus'; // Correct import
 
 export default {
-  components: { CopyDocument, Check, CircleCloseFilled, CircleCheckFilled },
+  components: {CopyDocument, Check, CircleCloseFilled, CircleCheckFilled},
   props: {
     servers: {
       type: Object,
@@ -163,6 +165,9 @@ export default {
 
 <style scoped>
 .server-item {
+  flex-direction: column;
+  display: flex;
+  max-width: 80vw;
   margin-bottom: 24px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
@@ -172,8 +177,8 @@ export default {
 }
 
 .copy-box {
-  padding: 10px;
-  width: 90%; /* header的90% */
+  padding: 4px;
+  width: 90%;
   height: 90%; /* header的90% */
   display: flex;
   justify-content: center;
@@ -223,13 +228,14 @@ export default {
 .server-status {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  padding: 8px;
+  padding: 4px;
   background-color: var(--el-bg-color);
-  min-width: 350px;
-  max-width: 400px;
+  width: fit-content;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 1em 1px rgba(85, 166, 201, 0.3);
+  overflow: hidden; /* 隐藏溢出内容 */
+  box-sizing: border-box; /* 包含内边距和边框 */
 }
 
 .header {
@@ -243,11 +249,9 @@ export default {
 }
 
 .server-address {
-  color: rgb(110, 110, 110); /* 默认颜色 */
+  color: rgb(110, 110, 110); /* 默认颜色，表示网站不在线 */
   font-size: 1.4em;
   font-weight: bolder;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
 }
 
 .server-address.online {

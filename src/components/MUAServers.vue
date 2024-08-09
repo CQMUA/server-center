@@ -1,9 +1,7 @@
 <template>
   <div class="muaservers" @mouseover="hover = true" @mouseleave="hover = false">
     <el-popover
-        width="auto"
-        slot="Hello"
-        popper-style="opacity:0.95; width=var(100vw - 20px) ; box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px; backdrop-filter: blur(10px);"
+        :popper-style="popoverStyle"
     >
       <template #reference>
         <el-avatar
@@ -52,8 +50,9 @@
   </div>
 </template>
 
+
 <script setup>
-import {ref, defineProps, computed} from 'vue';
+import {ref, defineProps, computed, onMounted} from 'vue';
 import {Link} from "@element-plus/icons-vue";
 
 const props = defineProps({
@@ -240,7 +239,7 @@ const serverInfo = [
     id: 'CYMC',
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
-    avatar: 'https://server.cqmu.online/cymc-logo-dark.png',
+    avatar: 'public/cymc-logo-dark.png',
     avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
     link: 'https://www.cqmu.online',
     servers: {
@@ -269,6 +268,30 @@ const hover = ref(false);
 const currentServerInfo = computed(() => {
   return serverInfo.find(server => server.id === props.id) || {};
 });
+
+// 沟槽的适配前端
+const popoverStyle = computed(() => {
+  let width = window.innerWidth < 768 ? '98vw' : 'fit-content';
+  return {
+    width: width,
+    maxWidth: '600px', // 最大600px
+    opacity: 0.95,
+    boxShadow: 'rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px',
+    padding: '20px',
+    backdropFilter: 'blur(10px)'
+  };
+});
+
+// Update on window resize
+const updatePopoverStyle = () => {
+  popoverStyle.value.width = window.innerWidth < 768 ? '98vw' : 'fit-content';
+};
+
+onMounted(() => {
+  window.addEventListener('resize', updatePopoverStyle);
+});
+
+
 </script>
 
 <style scoped>
@@ -276,10 +299,11 @@ const currentServerInfo = computed(() => {
   opacity: 0.7;
   transition: opacity 0.4s ease, filter 0.4s ease;
   pointer-events: auto;
+  overflow-x: hidden;
 }
 
 .muaservers:hover {
-  opacity: 1 !important; /* 保持透明度为 1 */
+
   filter: drop-shadow(0 0 3em #6AC8FE);
 }
 </style>

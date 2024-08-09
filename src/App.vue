@@ -36,8 +36,6 @@
         <el-divider>
           这是分割线
         </el-divider>
-
-        <ServerStatus/>
         <el-divider>
           这是分割线
         </el-divider>
@@ -52,9 +50,8 @@
 <style>
 
   .main-container {
-    max-width: calc(100vw - 3px);
-    margin: 0 auto;
     overflow-x: hidden;
+    width: 100%;
   }
 
   body {
