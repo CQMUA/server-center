@@ -1,9 +1,11 @@
 <template>
   <el-config-provider namespace="ep">
-    <BaseHeader/>
+    <Header/>
     <div class="flex main-container">
+<!--      <Side></Side>-->
       <div w="full" py="4">
         <HelloWorld msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
+
         <Logos my="4"/>
         <el-divider>
           这是分割线
@@ -39,7 +41,7 @@
         <el-divider>
           这是分割线
         </el-divider>
-<Footer></Footer>
+        <Footer></Footer>
       </div>
     </div>
   </el-config-provider>
@@ -48,14 +50,14 @@
 
 <style>
 
-  .main-container {
-    overflow-x: hidden;
-    width: 100%;
-  }
+.main-container {
+  overflow-x: hidden;
+  width: 100%;
+}
 
-  body {
-    overflow-x: hidden;
-  }
+body {
+  overflow-x: hidden;
+}
 
 .muaservers-container {
   display: flex;
@@ -65,10 +67,10 @@
   justify-content: center;
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  padding-top:  1em;
+  padding-top: 1em;
   padding-bottom: 1em;
   padding-left: -2em;
-  margin:0.5em;
+  margin: 0.5em;
   background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -118,7 +120,7 @@ const serverIds = [
 
 
 // 网站数据检测：https://vercel.com/multipledmes-projects/cymc-mc-servers/analytics
-import { inject } from '@vercel/analytics';
+import {inject} from '@vercel/analytics';
 // 网站访问检测：https://vercel.com/multipledmes-projects/cymc-mc-servers/speed-insights
 // import { SpeedInsights } from '@vercel/speed-insights/vue';
 inject();

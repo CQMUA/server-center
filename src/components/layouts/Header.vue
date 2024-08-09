@@ -4,9 +4,14 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
 </script>
 
 <template>
+
   <el-menu class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="1">
-      <el-link :icon="Position" href="https://www.mualliance.cn/server" target="_blank">MUA</el-link>
+    <el-menu-item h="full" @click="toggleDark()" class="rm">
+      <button
+          class="border-none w-full bg-transparent cursor-pointer"
+      >
+        <i inline-flex i="dark:ep-moon ep-sunny"/>
+      </button>
     </el-menu-item>
 
     <el-sub-menu index="2">
@@ -44,16 +49,13 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
     </el-menu-item>
 
 
-    <el-menu-item index="5">
+    <el-menu-item>
       <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">前往用户中心</el-link>
     </el-menu-item>
-    <el-menu-item h="full" @click="toggleDark()" class="rm">
-      <button
-          class="border-none w-full bg-transparent cursor-pointer"
-      >
-        <i inline-flex i="dark:ep-moon ep-sunny"/>
-      </button>
+    <el-menu-item>
+      <el-link :icon="Position" href="https://www.mualliance.cn/server" target="_blank">MUA</el-link>
     </el-menu-item>
+
   </el-menu>
 
 </template>
