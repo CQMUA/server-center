@@ -38,7 +38,6 @@ const toast = () => {
 }
 
 .container {
-  //display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
