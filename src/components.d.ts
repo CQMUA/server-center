@@ -46,7 +46,6 @@ declare module 'vue' {
     Logos: typeof import('./components/Logos.vue')['default']
     MUAServers: typeof import('./components/MUAServers.vue')['default']
     ServerStatistic: typeof import('./components/ServerStatistic.vue')['default']
-    ServerStatus: typeof import('./components/ServerStatus.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
     Skeleton: typeof import('./components/Skeleton.vue')['default']
     StatusUpdate: typeof import('./components/StatusUpdate.vue')['default']
