@@ -50,9 +50,9 @@
 </template>
 
 <style>
-.main-container {
-  height: calc(100vh - 3px);
-}
+  .main-container {
+    height: calc(100vh);
+  }
 
 .muaservers-container {
   display: flex;

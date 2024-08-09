@@ -180,6 +180,7 @@ export default {
   border-radius: 8px;
   padding: 8px;
   background-color: var(--el-bg-color);
+  min-width: 350px;
   max-width: 450px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
