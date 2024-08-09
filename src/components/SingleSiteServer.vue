@@ -1,6 +1,9 @@
 <template>
   <div class="server-status">
     <el-scrollbar max-height="400px">
+      <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
+        <p>这个学校好像没有服务器哦！</p>
+      </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
           <div class="header">
@@ -71,8 +74,8 @@
           </div>
         </div>
       </div>
-      <div v-else>
-        Minecraft Servers Loading...
+      <div v-else style="justify-content: center; align-self: center; text-align: center;">
+        Minecraft Servers Status Loading......
         <el-row v-loading="loading"></el-row>
       </div>
     </el-scrollbar>
@@ -122,7 +125,6 @@ export default {
   },
 };
 </script>
-
 
 
 <style scoped>

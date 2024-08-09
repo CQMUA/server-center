@@ -45,6 +45,7 @@
         </div>
         <el-divider>在线服务器</el-divider>
         <SingleSiteServer :servers="currentServerInfo.servers"></SingleSiteServer>
+
       </template>
     </el-popover>
   </div>
@@ -293,10 +294,7 @@ const serverInfo = [
     avatar: '#',
     avatar_university: '#',
     link: 'https://www.mualliance.cn/',
-    servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
-    }
+    servers: {}
   }
 ];
 
