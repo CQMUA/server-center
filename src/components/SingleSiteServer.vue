@@ -40,17 +40,11 @@
               </el-col>
             </el-row>
           </div>
-
           <div class="MUAServer-collapse">
             <el-collapse accordion>
               <el-collapse-item title="模组、插件" name="1">
-                <div>
-                  <el-icon></el-icon>
-                  模组：
-                </div>
-                <div>
-                  插件：
-                </div>
+                <div>模组：</div>
+                <div>插件：</div>
               </el-collapse-item>
               <el-collapse-item title="在线玩家(正版UUID查询，仅供参考)" name="2">
                 <div class="server-players" v-if="data.online">
@@ -77,7 +71,6 @@
           </div>
         </div>
       </div>
-
       <div v-else>
         Minecraft Servers Loading...
         <el-row v-loading="loading"></el-row>
@@ -93,38 +86,25 @@ import {CircleCheckFilled, CircleCloseFilled} from "@element-plus/icons-vue";
 
 export default {
   components: {CircleCloseFilled, CircleCheckFilled},
+  props: {
+    servers: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
       serverData: [],
       loading: true,
-      serverList: [
-        'play.purpleprison.net',
-        'play.jackpotmc.com',
-        'lobby.mualliance.ltd',
-        'csu-mc.org',
-        'mc.fdc.jingyijun.xyz',
-        'mc.fjmua.cn',
-        'gxucraft.cn',
-        'mc.hqucraft.top',
-        'lnu.lightzone.mevisual.top',
-        'mc.npucraft.com',
-        'perm.sdustmc.cn:25565',
-        'union.sitmc.club',
-        'smp2.sjmc.club',
-        'mua.suesmc.ltd',
-        'play.swustmc.fun:25565',
-        'mc.tarucraft.club',
-        'mc.mualliance.cn',
-        'core.xjtumc.com',
-        'union.ysumc.club'
-      ]
     };
   },
   methods: {
     async fetchServerStatus() {
       this.loading = true;
       try {
-        const requests = this.serverList.map(url => axios.get(`https://api.mcstatus.io/v2/status/java/${url}`));
+        const requests = Object.entries(this.servers).map(([name, address]) => {
+          return axios.get(`https://api.mcstatus.io/v2/status/java/${address}`);
+        });
         const responses = await Promise.all(requests);
         this.serverData = responses.map(response => response.data);
       } catch (error) {
@@ -135,22 +115,14 @@ export default {
     },
     getServerIcon(data) {
       return data.icon ? data.icon : defaultIcon;
-    },
-    handleKeydown(event) {
-      if (event.key === 'r' || event.key === 'R') {
-        this.fetchServerStatus(); // 按下 R 键时请求更新
-      }
     }
   },
   mounted() {
     this.fetchServerStatus(); // 初始请求
-    window.addEventListener('keydown', this.handleKeydown); // 监听键盘事件
-  },
-  beforeDestroy() {
-    window.removeEventListener('keydown', this.handleKeydown); // 移除事件监听
   },
 };
 </script>
+
 
 
 <style scoped>
@@ -206,10 +178,11 @@ export default {
   border-radius: 8px;
   padding: 8px;
   background-color: var(--el-bg-color);
-  max-width: 500px;
+  max-width: 450px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 1em 1px rgba(85, 166, 201, 0.3);
+
 }
 
 .header {
@@ -276,4 +249,6 @@ export default {
   color: rgb(0, 255, 177);
   text-align: right;
 }
+
 </style>
+
