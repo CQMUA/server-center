@@ -82,8 +82,7 @@
 </style>
 
 <script setup lang="ts">
-import {SpeedInsights} from "@vercel/speed-insights/next";
-
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 const serverIds = [
   'SJTU',
   'NJU',
