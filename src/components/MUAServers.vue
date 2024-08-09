@@ -270,7 +270,7 @@ const serverInfo = [
     id: 'CYMC',
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
-    avatar: 'public/cymc-logo-dark.png',
+    avatar: "../../public/cymc-logo-dark.png",
     avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
     link: 'https://www.cqmu.online',
     servers: {
