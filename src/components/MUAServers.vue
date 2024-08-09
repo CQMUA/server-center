@@ -103,8 +103,8 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/a/ac/Northwestern_Polytechnical_University_badge.svg/420px-Northwestern_Polytechnical_University_badge.svg.png',
     link: 'https://community.npucraft.com/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+      GXUCraft: 'gxucraft.cn',
+
     }
   },
   {
@@ -115,8 +115,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Fudan_University_Logo.svg/200px-Fudan_University_Logo.svg.png',
     link: 'https://fdcraft.github.io/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+      FDC: 'mc.fdc.jingyijun.xyz'
     }
   },
   {
@@ -127,8 +126,6 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/2/20/ZJUT_seal.svg/300px-ZJUT_seal.svg.png',
     link: 'https://zjutmc.club/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
     }
   },
   {
@@ -139,8 +136,6 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/0/07/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg/400px-%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg.png',
     link: 'https://space.bilibili.com/1377901474',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
     }
   },
   {
@@ -151,8 +146,6 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/76/Dalian_University_of_Technology_logo.svg/400px-Dalian_University_of_Technology_logo.svg.png',
     link: 'https://mcweb.unsafe.top/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
     }
   },
   {
@@ -163,8 +156,7 @@ const serverInfo = [
     avatar_university: 'https://img-ph-mirror.nosdn.127.net/qHzzfPZqvg16SPDMAQgdtw==/2189593843932474992.png',
     link: 'https://www.mualliance.cn/archives/463',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -175,8 +167,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/8/87/%E6%B2%88%E9%98%B3%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6logo.png',
     link: 'https://www.mualliance.cn/archives/498',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -187,8 +178,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/2/23/The_logo_of_SZTU.png',
     link: 'https://web.sztumc.top/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -199,8 +189,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/3/30/Shanghai_University_Of_Engineering_Science.png',
     link: 'https://www.mualliance.cn/archives/577',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -211,8 +200,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/48/%E8%A5%BF%E5%AE%89%E5%BB%BA%E7%AD%91%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.jpg',
     link: 'https://www.xauatcraft.com/',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -223,8 +211,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/c/cf/Xi%27an_Shiyou_University.jpg?20240326092124',
     link: 'https://www.mualliance.cn/archives/2363',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -235,8 +222,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/4a/%E5%8D%8E%E5%8C%97%E6%B0%B4%E5%88%A9%E6%B0%B4%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.jpg',
     link: 'https://www.mualliance.cn/archives/587',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -247,8 +233,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/9/9e/Handan_University_logo.jpg',
     link: 'https://www.mualliance.cn/archives/2323',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -259,8 +244,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/f/fa/CUMT_logo.jpg',
     link: 'https://www.mualliance.cn/wp-content/uploads/2024/03/c579a9ff597cb636dcd7c10842531653-300x300.png',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -271,8 +255,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/2/26/Southwest_Petroleum_University_logo.png',
     link: 'https://www.mualliance.cn/wp-content/uploads/2024/02/校徽mc-300x300.png',
     servers: {
-      SJMC: 'mua.suesmc.ltd',
-      Creative: 'creative.sjtu.cn',
+
     }
   },
   {
@@ -284,7 +267,12 @@ const serverInfo = [
     link: 'https://www.cqmu.online',
     servers: {
       MYCQMU: 'mc.cqmu.online',
+      Test: 's10.s100.vip',
       Creative: 'dev.cqmu.online',
+      HUB: 'hub.cqmu.online',
+      MOD: 'mod.cqmu.online',
+      MOD_TecH: 'tech.mod.cqmu.online',
+      Cherry: "cherry.cqmu.online",
     }
   },
   {
