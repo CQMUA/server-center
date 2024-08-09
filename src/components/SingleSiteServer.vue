@@ -97,7 +97,6 @@ export default {
     return {
       serverData: [],
       loading: true,
-      intervalId: null,
       serverList: [
         'play.purpleprison.net',
         'play.jackpotmc.com',
@@ -134,26 +133,25 @@ export default {
         this.loading = false;
       }
     },
-    // TODO: 异步请求设置缓存
-    // startFetching() {
-    //   this.fetchServerStatus();
-    //   this.intervalId = setInterval(this.fetchServerStatus, 10000);
-    // },
-    // stopFetching() {
-    //   clearInterval(this.intervalId);
-    // },
     getServerIcon(data) {
       return data.icon ? data.icon : defaultIcon;
+    },
+    handleKeydown(event) {
+      if (event.key === 'r' || event.key === 'R') {
+        this.fetchServerStatus(); // 按下 R 键时请求更新
+      }
     }
   },
   mounted() {
-    this.startFetching();
+    this.fetchServerStatus(); // 初始请求
+    window.addEventListener('keydown', this.handleKeydown); // 监听键盘事件
   },
   beforeDestroy() {
-    this.stopFetching();
+    window.removeEventListener('keydown', this.handleKeydown); // 移除事件监听
   },
 };
 </script>
+
 
 <style scoped>
 .server-item {
