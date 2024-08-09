@@ -117,6 +117,11 @@ const serverIds = [
   'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
 ];
 
+
+// 网站数据检测：https://vercel.com/multipledmes-projects/cymc-mc-servers/analytics
+import { inject } from '@vercel/analytics';
+inject();
+
 // 这里控制图标动画时长
 const animationDuration = 3;
 const delayIncrement = animationDuration / serverIds.length;
