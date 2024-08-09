@@ -11,8 +11,11 @@
 
         <div class="muaservers-container">
           <template v-for="(server, index) in serverIds" :key="server">
-            <MUAServers :id="server" :class="['muaservers-item', `delay-${index}`]"
-                        :style="{ animationDelay: `${delays[index]}s` }"/>
+            <MUAServers
+                :id="server"
+                :class="['muaservers-item', `delay-${index}`]"
+                :style="{ animationDelay: `${delays[index]}s` }"
+            />
           </template>
         </div>
 
@@ -23,20 +26,26 @@
         <el-divider>
           这是分割线
         </el-divider>
+
         <ServerStatistic/>
         <el-divider>
           这是分割线
         </el-divider>
+
+        <!-- 添加 SpeedInsights 组件 -->
+        <SpeedInsights/>
+
+        <el-divider>
+          这是分割线
+        </el-divider>
+
         <ServerStatus/>
       </div>
     </div>
   </el-config-provider>
 </template>
 
-
 <style>
-
-
 .main-container {
   height: calc(100vh - 3px);
 }
@@ -51,7 +60,7 @@
   border-radius: 8px;
   padding: 1em;
   background-color: rgba(255, 255, 255, 0.1);
-  margin: 1em
+  margin: 1em;
 }
 
 .muaservers-item {
@@ -70,10 +79,11 @@
     opacity: 0.3;
   }
 }
-
 </style>
 
 <script setup lang="ts">
+import {SpeedInsights} from "@vercel/speed-insights/next";
+
 const serverIds = [
   'SJTU',
   'NJU',
@@ -93,8 +103,9 @@ const serverIds = [
   'HDUART',
   'ZJUT_MINECRAFT',
   'SWPUMC',
-  'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
-
+  'PlaceHolder',
+  'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
+  'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
 ];
 
 // 这里控制图标动画时长
@@ -103,4 +114,3 @@ const delayIncrement = animationDuration / serverIds.length;
 
 const delays = serverIds.map((_, index) => delayIncrement * index);
 </script>
-
