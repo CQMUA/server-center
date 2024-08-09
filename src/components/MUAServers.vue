@@ -62,6 +62,37 @@ const props = defineProps({
   }
 });
 
+
+
+
+const hover = ref(false);
+const currentServerInfo = computed(() => {
+  return serverInfo.find(server => server.id === props.id) || {};
+});
+
+// 沟槽的适配前端
+const popoverStyle = computed(() => {
+  let width = window.innerWidth < 768 ? '98vw' : 'fit-content';
+  return {
+    width: width,
+    maxWidth: '600px', // 最大600px
+    opacity: 0.95,
+    boxShadow: 'rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px',
+    padding: '20px',
+    backdropFilter: 'blur(10px)'
+  };
+});
+
+// Update on window resize
+const updatePopoverStyle = () => {
+  popoverStyle.value.width = window.innerWidth < 768 ? '98vw' : 'fit-content';
+};
+
+onMounted(() => {
+  window.addEventListener('resize', updatePopoverStyle);
+});
+
+// 存储服务器信息的数组
 const serverInfo = [
   {
     id: 'SJTU',
@@ -262,36 +293,6 @@ const serverInfo = [
     servers: {}
   }
 ];
-
-
-const hover = ref(false);
-const currentServerInfo = computed(() => {
-  return serverInfo.find(server => server.id === props.id) || {};
-});
-
-// 沟槽的适配前端
-const popoverStyle = computed(() => {
-  let width = window.innerWidth < 768 ? '98vw' : 'fit-content';
-  return {
-    width: width,
-    maxWidth: '600px', // 最大600px
-    opacity: 0.95,
-    boxShadow: 'rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px',
-    padding: '20px',
-    backdropFilter: 'blur(10px)'
-  };
-});
-
-// Update on window resize
-const updatePopoverStyle = () => {
-  popoverStyle.value.width = window.innerWidth < 768 ? '98vw' : 'fit-content';
-};
-
-onMounted(() => {
-  window.addEventListener('resize', updatePopoverStyle);
-});
-
-
 </script>
 
 <style scoped>

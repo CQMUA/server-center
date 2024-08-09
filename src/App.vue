@@ -43,9 +43,9 @@
       </div>
     </div>
   </el-config-provider>
-  <template>
-    <SpeedInsights />
-  </template>
+<!--  <template>-->
+<!--    <SpeedInsights />-->
+<!--  </template>-->
 
 </template>
 
@@ -123,7 +123,7 @@ const serverIds = [
 // 网站数据检测：https://vercel.com/multipledmes-projects/cymc-mc-servers/analytics
 import { inject } from '@vercel/analytics';
 // 网站访问检测：https://vercel.com/multipledmes-projects/cymc-mc-servers/speed-insights
-import { SpeedInsights } from '@vercel/speed-insights/vue';
+// import { SpeedInsights } from '@vercel/speed-insights/vue';
 inject();
 
 // 这里控制图标动画时长
