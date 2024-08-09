@@ -134,13 +134,14 @@ export default {
         this.loading = false;
       }
     },
-    startFetching() {
-      this.fetchServerStatus();
-      this.intervalId = setInterval(this.fetchServerStatus, 10000);
-    },
-    stopFetching() {
-      clearInterval(this.intervalId);
-    },
+    // TODO: 异步请求设置缓存
+    // startFetching() {
+    //   this.fetchServerStatus();
+    //   this.intervalId = setInterval(this.fetchServerStatus, 10000);
+    // },
+    // stopFetching() {
+    //   clearInterval(this.intervalId);
+    // },
     getServerIcon(data) {
       return data.icon ? data.icon : defaultIcon;
     }
