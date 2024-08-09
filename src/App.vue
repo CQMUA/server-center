@@ -32,17 +32,22 @@
           这是分割线
         </el-divider>
 
-        <!-- 添加 SpeedInsights 组件 -->
-        <SpeedInsights/>
 
         <el-divider>
           这是分割线
         </el-divider>
 
         <ServerStatus/>
+        <el-divider>
+          这是分割线
+        </el-divider>
+        <!-- 添加 SpeedInsights 组件 -->
+        <SpeedInsights/>
       </div>
     </div>
   </el-config-provider>
+
+
 </template>
 
 <style>
@@ -82,7 +87,8 @@
 </style>
 
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/vue"
+import {SpeedInsights} from "@vercel/speed-insights/vue"
+
 const serverIds = [
   'SJTU',
   'NJU',
