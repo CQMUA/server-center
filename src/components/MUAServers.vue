@@ -82,8 +82,8 @@ const serverInfo = [
     avatar_university: 'https://img.sogoucdn.com/v2/thumb/crop/xy/ai/x/0/y/0/w/132/h/132/iw/30/ih/30/t/0/ir/3/retype_exclude_gif/ext/auto/q/80?t=2&appid=201115&url=https%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F6611%2Fcut-20210713155323-1750234654_jpg_427_536_36877.jpg%2F300',
     link: 'https://wiki.nmo.net.cn/',
     servers: {
-      NJU: 'https://mc.cqmu.online',
-      CQMU: 'https://mc.cqmu.online',
+      SJMC: 'mua.suesmc.ltd',
+      Creative: 'creative.sjtu.cn',
     }
   },
   {
