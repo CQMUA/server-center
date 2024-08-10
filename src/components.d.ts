@@ -10,6 +10,7 @@ declare module 'vue' {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
     Collapse: typeof import('./components/DataDisplay/Collapse.vue')['default']
+    CommonTabs: typeof import('./components/Navigation/CommonTabs.vue')['default']
     CYMCServerStatus: typeof import('./components/CYMCServerStatus.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -32,9 +33,11 @@ declare module 'vue' {
     ElSpace: typeof import('element-plus/es')['ElSpace']
     ElStatistic: typeof import('element-plus/es')['ElStatistic']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     Footer: typeof import('./components/layouts/Footer.vue')['default']
+    FrontInfo: typeof import('./components/FrontInfo.vue')['default']
     Header: typeof import('./components/layouts/Header.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     InfiniteScroll: typeof import('./components/DataDisplay/InfiniteScroll.vue')['default']
     Logos: typeof import('./components/Logos.vue')['default']
     MUAServers: typeof import('./components/MUAServers.vue')['default']
@@ -43,6 +46,7 @@ declare module 'vue' {
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
     Skeleton: typeof import('./components/Skeleton.vue')['default']
     StatusUpdate: typeof import('./components/StatusUpdate.vue')['default']
+    Tabs: typeof import('./components/Navigation/Tabs.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

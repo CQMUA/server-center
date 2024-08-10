@@ -1,5 +1,6 @@
 <template>
   <div class="server-status">
+    <StatusUpdate></StatusUpdate>
     <el-scrollbar max-height="368px" max-width="fit-content" :always=false>
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
         <p>这个学校或者好像没有服务器哦ovo！</p>
@@ -91,7 +92,7 @@
     </el-scrollbar>
 
   </div>
-  <StatusUpdate></StatusUpdate>
+
 </template>
 
 <script>
@@ -168,12 +169,13 @@ export default {
   flex-direction: column;
   display: flex;
   max-width: 80vw;
+  margin-top: 10px;
   margin-bottom: 24px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 10px;
   background-color: var(--el-bg-color);
-  box-shadow: 0 9px 1em 2px rgba(0, 0, 0, 0.43);
+  box-shadow: 0 2px 1em 4px rgba(0, 0, 0, 0.43);
 }
 
 .copy-box {

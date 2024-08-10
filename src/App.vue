@@ -4,9 +4,11 @@
     <div class="flex main-container">
 <!--      <Side></Side>-->
       <div w="full" py="4">
-        <HelloWorld msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
 
+        <FrontInfo msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
+<!--        <Tabs></Tabs>-->
         <Logos my="4"/>
+<!--        <CYMCServerStatus></CYMCServerStatus>-->
         <el-divider>
           这是分割线
         </el-divider>
@@ -93,6 +95,8 @@ body {
 </style>
 
 <script setup lang="ts">
+
+import Tabs from "~/components/Navigation/CommonTabs.vue";
 
 const serverIds = [
   'SJTU',
