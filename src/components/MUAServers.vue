@@ -283,6 +283,16 @@ const serverInfo = [
       Cherry: "cherry.cqmu.online",
     }
   },
+  //   模板文件
+  {
+    id: '',
+    name: '',
+    community: '',
+    avatar: '',
+    avatar_university: '',
+    link: '',
+    servers: {},
+  },
   {
     id: 'PlaceHolder',
     name: '占位符',
@@ -293,7 +303,8 @@ const serverInfo = [
     servers: {
       Test: "demo.mcstatus.io"
     }
-  }
+  },
+
 ];
 </script>
 
