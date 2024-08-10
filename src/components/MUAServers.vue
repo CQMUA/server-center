@@ -295,7 +295,7 @@ const serverInfo = [
   },
   {
     id: 'PlaceHolder',
-    name: '占位符',
+    name: '',
     community: 'MUA',
     avatar: '#',
     avatar_university: '#',
