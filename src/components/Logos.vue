@@ -1,7 +1,7 @@
 <template>
   <div id="logo-container">
     <a href="https://www.cqmu.online" target="_blank" class="logo-link">
-      <img src="https://gitee.com/JQCNLink/CYMC-MCServers/raw/main/src/assets/cymc-logo-dark.png" class="logo" alt="Vite logo"/>
+      <img src="https://www.cqmu.online/wp-content/uploads/2024/07/radius-logo-dark.png" class="logo" alt="Vite logo"/>
       <span class="tooltip">CYMC官网</span>
     </a>
     <a href="https://www.mualliance.cn/" target="_blank" class="logo-link">

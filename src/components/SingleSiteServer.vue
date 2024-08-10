@@ -100,7 +100,7 @@ import {ref, onMounted} from 'vue';
 import axios from 'axios';
 import defaultIcon from '../assets/bingo_cat.gif';
 import {CircleCheckFilled, CircleCloseFilled, CopyDocument, Check} from "@element-plus/icons-vue";
-import {ElMessage} from 'element-plus'; // Correct import
+import {ElMessage} from 'element-plus';
 
 export default {
   components: {CopyDocument, Check, CircleCloseFilled, CircleCheckFilled},
@@ -138,15 +138,23 @@ export default {
       const textToCopy = `${host}:${port}`;
       navigator.clipboard.writeText(textToCopy).then(() => {
         copySuccess.value[index] = true;
-        ElMessage.success('地址已复制到剪切板！'); // Use ElMessage directly
+        ElMessage.success({
+          message: '已复制到剪切板',
+          offset: 500 // 设置消息框距离顶部的距离
+        });
 
         setTimeout(() => {
-          copySuccess.value[index] = false; // Reset after 3 seconds
+          copySuccess.value[index] = false; // 超时时间
         }, 3000);
       }).catch(err => {
+        ElMessage.error({
+          message: "复制出错了？",
+          offset: 500 // 设置消息框距离顶部的距离
+        });
         console.error('复制失败:', err);
       });
     };
+
 
     onMounted(() => {
       fetchServerStatus(); // Initial request

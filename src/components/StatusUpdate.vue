@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-left: 4px; padding-bottom: 9px; display: flex; justify-content: space-between;">
+  <div style="margin-left: -1px; padding-bottom: 9px; display: flex; justify-content: space-between;">
     <div style="display: flex; gap: 1px;">
       <transition name="fade">
         <el-button
@@ -15,7 +15,7 @@
 <!--      <el-button type="success" :icon="Check" circle />-->
       <el-button type="danger" :icon="Close" circle :disabled="true" title="关闭界面" />
     </div>
-    <div style="margin-right: 4px">
+    <div style="margin-right: -1px">
       <el-button type="info" :icon="Position" circle title="前往" :disabled="true"/>
     </div>
   </div>
