@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; justify-content: space-between; background-color: rgba(255, 255, 255, 0.2)">
+  <div style="display: flex; justify-content: space-between; background-color: rgba(0,0,0,0.25)">
     <div style="display: flex; gap: 1px; padding: 10px;">
       <transition name="fade">
         <el-button
@@ -12,7 +12,7 @@
             @click="handleRefresh"
         />
       </transition>
-      <el-button type="danger" :icon="Close" circle :disabled="true" title="关闭界面" />
+      <el-button type="danger" :icon="Close" circle title="关闭界面" />
     </div>
     <div style="padding: 10px">
       <el-button type="info" :icon="Position" circle title="前往" :disabled="true" />
