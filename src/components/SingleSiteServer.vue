@@ -2,8 +2,8 @@
   <div class="server-status">
     <StatusUpdate></StatusUpdate>
     <el-scrollbar max-height="368px" max-width="fit-content" :always=false>
-      <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
-        <p>这个学校或者好像没有服务器哦ovo！</p>
+      <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
+        这个学校或者组织没有服务器记录
       </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
@@ -238,7 +238,6 @@ export default {
 .server-status {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  padding: 4px;
   background-color: var(--el-bg-color);
   width: fit-content;
   margin: 20px auto;
