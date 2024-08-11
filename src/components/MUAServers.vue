@@ -291,7 +291,7 @@ const serverInfo = [
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
     avatar: "https://www.mualliance.cn/wp-content/uploads/2024/06/cropped-cropped-logo-Photoroom-768x768.png",
-    avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
       MYCQMU: 'mc.cqmu.online',
