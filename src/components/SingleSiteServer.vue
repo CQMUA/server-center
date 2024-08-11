@@ -265,7 +265,7 @@ export default {
 
 .server-address {
   color: rgb(110, 110, 110);
-  font-size: 1.4em;
+  font-size: 1.23em;
   font-weight: bolder;
 }
 
