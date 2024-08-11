@@ -6,10 +6,13 @@
         trigger="click"
     >
       <template #reference>
-        <el-avatar
-            :size="60"
-            :src="currentServerInfo.avatar"
-        />
+        <transition name="fade" mode="out-in">
+          <el-avatar
+              :key="avatarKey"
+              :size="60"
+              :src="showAvatar ? currentServerInfo.avatar : currentServerInfo.avatar_university"
+          />
+        </transition>
       </template>
       <template #default>
         <div class="demo-rich-content" style="display: flex; justify-content: center; gap: 16px; flex-direction: row;">
@@ -54,7 +57,7 @@
 
 
 <script setup>
-import {ref, defineProps, computed, onMounted} from 'vue';
+import {ref, defineProps, computed, onMounted, onUnmounted} from 'vue';
 import {Link} from "@element-plus/icons-vue";
 
 const props = defineProps({
@@ -64,11 +67,28 @@ const props = defineProps({
   }
 });
 
-
-const hover = ref(false);
 const currentServerInfo = computed(() => {
   return serverInfo.find(server => server.id === props.id) || {};
 });
+
+const showAvatar = ref(true);
+const avatarKey = ref(0); // 用于触发过渡效果
+
+const toggleAvatar = () => {
+  showAvatar.value = !showAvatar.value;
+  avatarKey.value++; // 改变 key 触发过渡
+};
+
+let intervalId;
+
+onMounted(() => {
+  intervalId = setInterval(toggleAvatar, 5500); // 每5.5秒切换一次(别设置太低，频繁请求服务器了)
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId); // 清理定时器
+});
+
 
 // 沟槽的适配前端
 const popoverStyle = computed(() => {
@@ -318,7 +338,17 @@ const serverInfo = [
 
 .muaservers:hover {
 
-  filter: drop-shadow(0 0 3em #6AC8FE);
+  filter: drop-shadow(0 0 3em #01ffea);
 }
-</style>
 
+ .fade-enter-active, .fade-leave-active {
+   transition: opacity 0.46s;
+ }
+.fade-enter-from, .fade-leave-to {
+  opacity: 0.23;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+</style>
