@@ -77,26 +77,26 @@ body {
 }
 
 .muaservers-item {
-  animation: fadeInOut 3s linear infinite;
+  animation: fadeInOut 5s linear infinite;
 }
 
 /* 定义动画 */
 @keyframes fadeInOut {
   0% {
-    opacity: 0.3;
+    opacity: 0.01;
   }
   50% {
-    opacity: 1.5;
+    opacity: 1;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0.01;
   }
 }
 </style>
 
 <script setup lang="ts">
 
-import Tabs from "~/components/Navigation/CommonTabs.vue";
+// import Tabs from "~/components/Navigation/CommonTabs.vue";
 
 const serverIds = [
   'SJTU',
@@ -129,7 +129,7 @@ import {inject} from '@vercel/analytics';
 // import { SpeedInsights } from '@vercel/speed-insights/vue';
 inject();
 
-// 这里控制图标动画时长
+// Optional: 可作为keyframe控制自动图标动画时长 [Feature]
 const animationDuration = 3;
 const delayIncrement = animationDuration / serverIds.length;
 
