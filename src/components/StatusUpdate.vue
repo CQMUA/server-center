@@ -1,6 +1,6 @@
 <template>
-  <div style="margin-left: 7px; margin-right: 7px; margin-top: 4px; padding-bottom: 9px; display: flex; justify-content: space-between;">
-    <div style="display: flex; gap: 1px;">
+  <div style="display: flex; justify-content: space-between; background-color: rgba(255,255,255,0.2)">
+    <div style="display: flex; gap: 1px; padding: 10px;">
       <transition name="fade">
         <el-button
             key="refresh-button"
@@ -15,7 +15,7 @@
       <!--      <el-button type="success" :icon="Check" circle />-->
       <el-button type="danger" :icon="Close" circle :disabled="true" title="关闭界面"/>
     </div>
-    <div style="margin-right: -1px">
+    <div style="padding: 10px">
       <el-button type="info" :icon="Position" circle title="前往" :disabled="true"/>
     </div>
   </div>
