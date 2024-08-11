@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Collapse: typeof import('./components/DataDisplay/Collapse.vue')['default']
     CommonTabs: typeof import('./components/Navigation/CommonTabs.vue')['default']
+    ConcretServerInfo: typeof import('./components/ConcretServerInfo.vue')['default']
     CYMCServerStatus: typeof import('./components/CYMCServerStatus.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
