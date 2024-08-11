@@ -2,13 +2,13 @@
   <el-config-provider namespace="ep">
     <Header/>
     <div class="flex main-container">
-<!--      <Side></Side>-->
+      <!--      <Side></Side>-->
       <div w="full" py="4">
 
         <FrontInfo msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
-<!--        <Tabs></Tabs>-->
+        <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
-<!--        <CYMCServerStatus></CYMCServerStatus>-->
+        <!--        <CYMCServerStatus></CYMCServerStatus>-->
         <el-divider>
           这是分割线
         </el-divider>
@@ -77,19 +77,19 @@ body {
 }
 
 .muaservers-item {
-  animation: fadeInOut 5.5s linear infinite;
+  animation: fadeInOut 10s linear infinite;
 }
 
 /* 定义动画 */
 @keyframes fadeInOut {
   0% {
-    opacity: 0.01;
+    opacity: 0.001;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.01;
+    opacity: 0.001;
   }
 }
 </style>
@@ -119,7 +119,7 @@ const serverIds = [
   'SWPUMC',
   'PlaceHolder',
   'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
-  'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
+  'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
 ];
 
 

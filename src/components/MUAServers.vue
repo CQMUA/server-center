@@ -82,7 +82,7 @@ const toggleAvatar = () => {
 let intervalId;
 
 onMounted(() => {
-  intervalId = setInterval(toggleAvatar, 5500); // 每5.5秒切换一次(别设置太低，频繁请求服务器了)
+  intervalId = setInterval(toggleAvatar, 10000); // Avatar.isShow()切换周期[Animation Control]
 });
 
 onUnmounted(() => {
@@ -317,8 +317,8 @@ const serverInfo = [
     id: 'PlaceHolder',
     name: '',
     community: 'MUA',
-    avatar: '#',
-    avatar_university: '#',
+    avatar: 'https://zh.wikipedia.org/static/images/icons/wikipedia.png',
+    avatar_university: '',
     link: 'https://www.mualliance.cn/',
     servers: {
       Test: "demo.mcstatus.io"
