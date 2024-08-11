@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-left: -1px; padding-bottom: 9px; display: flex; justify-content: space-between;">
+  <div style="margin-left: 7px; margin-right: 7px; margin-top: 4px; padding-bottom: 9px; display: flex; justify-content: space-between;">
     <div style="display: flex; gap: 1px;">
       <transition name="fade">
         <el-button
@@ -12,8 +12,8 @@
             @click="refresh"
         />
       </transition>
-<!--      <el-button type="success" :icon="Check" circle />-->
-      <el-button type="danger" :icon="Close" circle :disabled="true" title="关闭界面" />
+      <!--      <el-button type="success" :icon="Check" circle />-->
+      <el-button type="danger" :icon="Close" circle :disabled="true" title="关闭界面"/>
     </div>
     <div style="margin-right: -1px">
       <el-button type="info" :icon="Position" circle title="前往" :disabled="true"/>
@@ -22,17 +22,20 @@
 </template>
 
 <style scoped>
+
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.8s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0;
+
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */
+{
+  opacity: 0.5;
 }
 </style>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Check, Close, Position, Refresh } from "@element-plus/icons-vue";
+import {ref} from 'vue';
+import {Check, Close, Position, Refresh} from "@element-plus/icons-vue";
 
 const isRefreshing = ref(false);
 const refreshSuccess = ref(false);
