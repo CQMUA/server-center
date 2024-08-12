@@ -9,8 +9,8 @@ $--colors: (
 @forward "element-plus/theme-chalk/src/dark/var.scss" with (
     $bg-color: (
     'page': #000000,
-    '': rgba(53,49,49,0.8),
-    'overlay': rgba(67,67,67,0.9),
+    '': rgb(53,49,49),
+    'overlay': rgb(67,67,67),
 
   ),
 

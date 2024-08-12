@@ -1,19 +1,22 @@
 <template>
   <div class="server-status">
-    <StatusUpdate></StatusUpdate>
-    <el-scrollbar max-height="368px" max-width="fit-content" :always=false>
-      <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center">
-        <p>这个学校或者好像没有服务器哦ovo！</p>
+    <StatusUpdate @refresh="fetchServerStatus"></StatusUpdate>
+    <el-scrollbar max-height="368px" max-width="fit-content" :always="false">
+      <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
+        这个学校或者组织没有服务器记录
       </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
           <div class="header">
             <div class="header-left">
-              <el-icon size="30" v-if="data.online" color="green">
-                <CircleCheckFilled/>
+              <el-icon size="30" v-if="data.online && !refreshing" color="green">
+                <CircleCheckFilled />
               </el-icon>
-              <el-icon size="30" v-else color="red">
-                <CircleCloseFilled/>
+              <el-icon size="30" v-else-if="!data.online && !refreshing" color="red">
+                <CircleCloseFilled />
+              </el-icon>
+              <el-icon size="30" v-if="refreshing" color="orange">
+                <Loading />
               </el-icon>
               <div class="copy-box">
                 <span :class="['server-address', { online: data.online }]">
@@ -24,10 +27,10 @@
                       @click="data.online ? copyToClipboard(data.host, data.port, index) : null"
                   >
                     <template v-if="copySuccess[index]">
-                      <Check/>
+                      <Check />
                     </template>
                     <template v-else>
-                      <CopyDocument/>
+                      <CopyDocument />
                     </template>
                   </el-icon>
                 </span>
@@ -38,7 +41,7 @@
             <el-row :gutter="40">
               <el-col :span="4">
                 <div style="justify-content: center; align-self: center">
-                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon"/>
+                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon" />
                 </div>
               </el-col>
               <el-col :span="20">
@@ -90,20 +93,19 @@
         <el-row v-loading="loading"></el-row>
       </div>
     </el-scrollbar>
-
   </div>
-
 </template>
 
 <script>
-import {ref, onMounted} from 'vue';
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import StatusUpdate from './StatusUpdate.vue'; // Import the StatusUpdate component
 import defaultIcon from '../assets/bingo_cat.gif';
-import {CircleCheckFilled, CircleCloseFilled, CopyDocument, Check} from "@element-plus/icons-vue";
-import {ElMessage} from 'element-plus';
+import { CircleCheckFilled, CircleCloseFilled, CopyDocument, Check, Loading } from "@element-plus/icons-vue"; // Import Loading icon
+import { ElMessage } from 'element-plus';
 
 export default {
-  components: {CopyDocument, Check, CircleCloseFilled, CircleCheckFilled},
+  components: { StatusUpdate, CopyDocument, Check, CircleCloseFilled, CircleCheckFilled, Loading },
   props: {
     servers: {
       type: Object,
@@ -112,10 +114,12 @@ export default {
   },
   setup(props) {
     const serverData = ref([]);
-    const loading = ref(true);
-    const copySuccess = ref({}); // Use ref for reactivity
+    const loading = ref(false);
+    const copySuccess = ref({});
+    const refreshing = ref(false); // New state for refreshing
 
     const fetchServerStatus = async () => {
+      refreshing.value = true; // Set refreshing state to true
       loading.value = true;
       try {
         const requests = Object.entries(props.servers).map(([name, address]) => {
@@ -125,8 +129,10 @@ export default {
         serverData.value = responses.map(response => response.data);
       } catch (error) {
         console.error('Error fetching server status:', error);
+        ElMessage.error('请求服务器状态失败！');
       } finally {
         loading.value = false;
+        refreshing.value = false; // Reset refreshing state
       }
     };
 
@@ -140,21 +146,20 @@ export default {
         copySuccess.value[index] = true;
         ElMessage.success({
           message: '已复制到剪切板',
-          offset: 500 // 设置消息框距离顶部的距离
+          offset: 500
         });
 
         setTimeout(() => {
-          copySuccess.value[index] = false; // 超时时间
+          copySuccess.value[index] = false;
         }, 3000);
       }).catch(err => {
         ElMessage.error({
           message: "复制出错了？",
-          offset: 500 // 设置消息框距离顶部的距离
+          offset: 500
         });
         console.error('复制失败:', err);
       });
     };
-
 
     onMounted(() => {
       fetchServerStatus(); // Initial request
@@ -164,6 +169,7 @@ export default {
       serverData,
       loading,
       copySuccess,
+      refreshing, // Expose refreshing state
       fetchServerStatus,
       getServerIcon,
       copyToClipboard
@@ -189,7 +195,7 @@ export default {
 .copy-box {
   padding: 4px;
   width: 90%;
-  height: 90%; /* header的90% */
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,14 +244,13 @@ export default {
 .server-status {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  padding: 4px;
   background-color: var(--el-bg-color);
   width: fit-content;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 1em 1px rgba(85, 166, 201, 0.3);
-  overflow: hidden; /* 隐藏溢出内容 */
-  box-sizing: border-box; /* 包含内边距和边框 */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .header {
@@ -259,8 +264,8 @@ export default {
 }
 
 .server-address {
-  color: rgb(110, 110, 110); /* 默认颜色，表示网站不在线 */
-  font-size: 1.4em;
+  color: rgb(110, 110, 110);
+  font-size: 1.23em;
   font-weight: bolder;
 }
 

@@ -2,13 +2,13 @@
   <el-config-provider namespace="ep">
     <Header/>
     <div class="flex main-container">
-<!--      <Side></Side>-->
+      <!--      <Side></Side>-->
       <div w="full" py="4">
 
         <FrontInfo msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
-<!--        <Tabs></Tabs>-->
+        <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
-<!--        <CYMCServerStatus></CYMCServerStatus>-->
+        <!--        <CYMCServerStatus></CYMCServerStatus>-->
         <el-divider>
           这是分割线
         </el-divider>
@@ -77,26 +77,26 @@ body {
 }
 
 .muaservers-item {
-  animation: fadeInOut 3s linear infinite;
+  animation: fadeInOut 10s linear infinite;
 }
 
 /* 定义动画 */
 @keyframes fadeInOut {
   0% {
-    opacity: 0.3;
+    opacity: 0.001;
   }
   50% {
-    opacity: 1.5;
+    opacity: 1;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0.001;
   }
 }
 </style>
 
 <script setup lang="ts">
 
-import Tabs from "~/components/Navigation/CommonTabs.vue";
+// import Tabs from "~/components/Navigation/CommonTabs.vue";
 
 const serverIds = [
   'SJTU',
@@ -119,7 +119,7 @@ const serverIds = [
   'SWPUMC',
   'PlaceHolder',
   'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
-  'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
+  'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder', 'PlaceHolder',
 ];
 
 
@@ -129,7 +129,7 @@ import {inject} from '@vercel/analytics';
 // import { SpeedInsights } from '@vercel/speed-insights/vue';
 inject();
 
-// 这里控制图标动画时长
+// Optional: 可作为keyframe控制自动图标动画时长 [Feature]
 const animationDuration = 3;
 const delayIncrement = animationDuration / serverIds.length;
 
