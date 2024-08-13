@@ -6,10 +6,13 @@
         trigger="click"
     >
       <template #reference>
-        <el-avatar
-            :size="60"
-            :src="currentServerInfo.avatar"
-        />
+        <transition name="fade" mode="out-in">
+          <el-avatar
+              :key="avatarKey"
+              :size="60"
+              :src="showAvatar ? currentServerInfo.avatar : currentServerInfo.avatar_university"
+          />
+        </transition>
       </template>
       <template #default>
         <div class="demo-rich-content" style="display: flex; justify-content: center; gap: 16px; flex-direction: row;">
@@ -54,7 +57,7 @@
 
 
 <script setup>
-import {ref, defineProps, computed, onMounted} from 'vue';
+import {ref, defineProps, computed, onMounted, onUnmounted} from 'vue';
 import {Link} from "@element-plus/icons-vue";
 
 const props = defineProps({
@@ -64,11 +67,28 @@ const props = defineProps({
   }
 });
 
-
-const hover = ref(false);
 const currentServerInfo = computed(() => {
   return serverInfo.find(server => server.id === props.id) || {};
 });
+
+const showAvatar = ref(true);
+const avatarKey = ref(0); // 用于触发过渡效果
+
+const toggleAvatar = () => {
+  showAvatar.value = !showAvatar.value;
+  avatarKey.value++; // 改变 key 触发过渡
+};
+
+let intervalId;
+
+onMounted(() => {
+  intervalId = setInterval(toggleAvatar, 10000); // Avatar.isShow()切换周期[Animation Control]
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId); // 清理定时器
+});
+
 
 // 沟槽的适配前端
 const popoverStyle = computed(() => {
@@ -270,8 +290,8 @@ const serverInfo = [
     id: 'CYMC',
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
-    avatar: "https://gitee.com/JQCNLink/CYMC-MCServers/raw/main/src/assets/cymc-logo-dark.png",
-    avatar_university: 'https://vi.cqmu.edu.cn/static/picture/logo.png',
+    avatar: "https://www.mualliance.cn/wp-content/uploads/2024/06/cropped-cropped-logo-Photoroom-768x768.png",
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
       MYCQMU: 'mc.cqmu.online',
@@ -297,8 +317,8 @@ const serverInfo = [
     id: 'PlaceHolder',
     name: '',
     community: 'MUA',
-    avatar: '#',
-    avatar_university: '#',
+    avatar: 'https://zh.wikipedia.org/static/images/icons/wikipedia.png',
+    avatar_university: '',
     link: 'https://www.mualliance.cn/',
     servers: {
       Test: "demo.mcstatus.io"
@@ -318,7 +338,17 @@ const serverInfo = [
 
 .muaservers:hover {
 
-  filter: drop-shadow(0 0 3em #6AC8FE);
+  filter: drop-shadow(0 0 3em #01ffea);
 }
-</style>
 
+ .fade-enter-active, .fade-leave-active {
+   transition: opacity 0.46s;
+ }
+.fade-enter-from, .fade-leave-to {
+  opacity: 0.23;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+</style>
