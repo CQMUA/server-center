@@ -85,7 +85,7 @@ const toggleAvatar = () => {
 let intervalId;
 
 onMounted(() => {
-  intervalId = setInterval(toggleAvatar, 8000); // Avatar.isShow()切换周期[Animation Control]
+  intervalId = setInterval(toggleAvatar, 10000); // Avatar.isShow()切换周期[Animation Control]
 });
 
 onUnmounted(() => {

@@ -77,7 +77,7 @@ body {
 }
 
 .muaservers-item {
-  animation: fadeInOut 8s linear infinite;
+  animation: fadeInOut 10s linear infinite;
 }
 
 /* 定义动画 */
