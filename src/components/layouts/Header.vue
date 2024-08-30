@@ -1,6 +1,16 @@
 <script lang="ts" setup>
 import {toggleDark} from "~/composables";
-import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from "@element-plus/icons-vue";
+import {
+  Check,
+  Connection,
+  MagicStick,
+  Monitor,
+  Position,
+  Select,
+  Star,
+  StarFilled,
+  WindPower
+} from "@element-plus/icons-vue";
 </script>
 
 <template>
@@ -17,7 +27,7 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
     <el-sub-menu index="2">
       <template #title>
         <el-icon color="green">
-          <Monitor/>
+          <WindPower/>
         </el-icon>
         CYMC
       </template>
@@ -35,9 +45,13 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
         互通服
       </template>
       <el-menu-item index="3-1">
-        <el-link :icon="Star" href="https://lobby.mualliance.ltd" target="_blank" onclick="true">MUA联合服</el-link>
+        <el-link :icon="Select" href="https://www.mualliance.cn/archives/719" target="_blank" onclick="true">MUA联合服
+        </el-link>
+
       </el-menu-item>
-<!--      <el-menu-item index="3-2" disabled>荷兰PC2</el-menu-item>-->
+      <el-menu-item index="3-2">
+        <el-link :icon="Select" target="_blank" href="https://www.mualliance.cn/archives/2095" onclick="true">MUA联合大厅</el-link>
+      </el-menu-item>
       <el-menu-item index="3-3">
         <el-link :icon="StarFilled" href="https://hypixel.net/" target="_blank" disabled>小游戏服
         </el-link>
@@ -60,7 +74,7 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
 
 </template>
 
-<style >
+<style>
 .rm {
   display: flex;
   margin-right: -10px;
