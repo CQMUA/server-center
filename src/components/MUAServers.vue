@@ -307,7 +307,7 @@ const serverInfo = [
   },
   //   模板文件
   {
-    id: '**',
+    id: '',
     name: '',
     community: '',
     avatar: '',
