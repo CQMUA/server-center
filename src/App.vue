@@ -136,9 +136,11 @@ const serverIds = [
   'SCAE',
   'JNUcraft',
   'DDMC',
-  '湖南师范大学HSMC社群',
+  'HNNU',
   '中南林业科技大学Minecraft组织',
   'CSU-MC',
+  'HNNU',
+  'PlaceHolder',
 ];
 
 
