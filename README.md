@@ -1,10 +1,10 @@
-## Project setup
+## 项目设置
 
 ```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译和加载项目
 
 ```bash
 npm run dev
