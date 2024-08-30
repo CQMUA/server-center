@@ -35,11 +35,11 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
         互通服
       </template>
       <el-menu-item index="3-1">
-        <el-link :icon="Star" href="https://lobby.mualliance.ltd" target="_blank" disabled>MUA联合服</el-link>
+        <el-link :icon="Star" href="https://lobby.mualliance.ltd" target="_blank" onclick="true">MUA联合服</el-link>
       </el-menu-item>
-      <el-menu-item index="3-2" disabled>荷兰PC2</el-menu-item>
+<!--      <el-menu-item index="3-2" disabled>荷兰PC2</el-menu-item>-->
       <el-menu-item index="3-3">
-        <el-link :icon="StarFilled" href="https://hypixel.net/" target="_blank">Hypixel
+        <el-link :icon="StarFilled" href="https://hypixel.net/" target="_blank" disabled>小游戏服
         </el-link>
       </el-menu-item>
     </el-sub-menu>
@@ -50,7 +50,7 @@ import {Check, Connection, MagicStick, Monitor, Position, Star, StarFilled} from
 
 
     <el-menu-item>
-      <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">前往用户中心</el-link>
+      <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">CYMC用户中心</el-link>
     </el-menu-item>
     <el-menu-item>
       <el-link :icon="Position" href="https://www.mualliance.cn/server" target="_blank">MUA</el-link>
