@@ -6,7 +6,7 @@
       <div w="full" py="4">
 
         <FrontInfo msg="CYMC 服务器中心(更新中)"/>
-        <!--        <Tabs></Tabs>-->z
+        <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
         <!--        <CYMCServerStatus></CYMCServerStatus>-->
         <el-divider>
