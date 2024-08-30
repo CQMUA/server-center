@@ -305,7 +305,7 @@ const serverInfo = [
       Cherry: "cherry.cqmu.online",
     }
   },
-  //   模板文件
+    // 模板文件
   {
     id: '',
     name: '',
@@ -315,6 +315,7 @@ const serverInfo = [
     link: '',
     servers: {},
   },
+
   {
     id: 'PlaceHolder',
     name: '',
@@ -345,9 +346,9 @@ const serverInfo = [
     servers: {},
   },
   {
-    id: 'SYUMC',
+    id: 'SD',
     name: '新疆大学服务器',
-    community: 'SYUMC',
+    community: 'ShinJ',
     avatar: 'https://www.mualliance.cn/wiki/%E6%96%87%E4%BB%B6:XJUCraft-logo.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/4a/Xinjiang_University_logo.png',
     link: 'https://www.mualliance.cn/archives/527',
@@ -372,7 +373,7 @@ const serverInfo = [
     servers: {},
   },
   {
-    id: '#',
+    id: 'XAUT',
     name: '西安理工大学服务器',
     community: '#',
     avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/70/Xi%27an_University_of_Technology_logo.svg/300px-Xi%27an_University_of_Technology_logo.svg.png',
@@ -429,8 +430,8 @@ const serverInfo = [
     id: 'SWYSTMC',
     name: '西南科技大学星空社',
     community: 'SWYSTMC',
-    avatar: '',
-    avatar_university: '',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/2/28/Southwest_University_of_Science_and_Technology_logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/2/28/Southwest_University_of_Science_and_Technology_logo.png',
     link: 'https://www.swustmc.fun/',
     servers: {},
   },
@@ -602,16 +603,16 @@ const serverInfo = [
     servers: {},
   },
   {
-    id: '#',
+    id: 'HNNU',
     name: '湖南师范大学HSMC社群',
-    community: '#',
+    community: 'HSMC',
     avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d0/%E6%B9%96%E5%8D%97%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%BE%BD.png/300px-%E6%B9%96%E5%8D%97%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%BE%BD.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d0/%E6%B9%96%E5%8D%97%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%BE%BD.png/300px-%E6%B9%96%E5%8D%97%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%BE%BD.png',
     link: 'https://www.mualliance.cn/archives/1120',
     servers: {},
   },
   {
-    id: '#',
+    id: '',
     name: '中南林业科技大学Minecraft组织',
     community: '#',
     avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/f7/Central_South_University_of_Forestry_and_Technology_logo.png/300px-Central_South_University_of_Forestry_and_Technology_logo.png',
