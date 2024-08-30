@@ -225,7 +225,6 @@ export default {
   border-radius: 4px;
   background-color: var(--el-button-bg-color);
   cursor: pointer;
-  //mix-blend-mode: lighten;
 }
 
 .card-hover:hover {
