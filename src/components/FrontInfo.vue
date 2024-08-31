@@ -24,9 +24,9 @@ const toast = () => {
       </p>
     </div>
 
-    <div class="mb-4">
-      <el-button size="large" @click="toast">试一下电子木鱼</el-button>
-    </div>
+<!--    <div class="mb-4">-->
+<!--      <el-button size="large" @click="toast">试一下电子木鱼</el-button>-->
+<!--    </div>-->
   </div>
 </template>
 

@@ -5,12 +5,12 @@
       <!--      <Side></Side>-->
       <div w="full" py="4">
 
-        <FrontInfo msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
+        <FrontInfo msg="CYMC 服务器中心(更新中)"/>
         <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
         <!--        <CYMCServerStatus></CYMCServerStatus>-->
         <el-divider>
-          这是分割线
+          MUA联盟高校
         </el-divider>
 
         <div class="muaservers-container">
@@ -23,27 +23,27 @@
           </template>
         </div>
 
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
-        <ServerStatistic/>
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <ServerStatistic/>-->
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
 
-        <el-divider>
-          这是分割线
-        </el-divider>
-        <el-divider>
-          这是分割线
-        </el-divider>
-        <Footer></Footer>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
+<!--        <Footer></Footer>-->
       </div>
     </div>
   </el-config-provider>

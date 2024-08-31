@@ -63,13 +63,14 @@
                 <div>插件：</div>
               </el-collapse-item>
               <el-collapse-item
-                  :title="`在线玩家(${data.online ? data.players.online : 0} / ${data.online ? data.players.max : 0}) (正版UUID查询，仅供参考)`"
+                  :title="`在线玩家(${data.online ? data.players.online : 0} / ${data.online ? data.players.max : 0})`"
                   name="2">
                 <div class="server-players" v-if="data.online">
-                  <ol class="flex flex-wrap gap-2 mt-3 list-none">
+                  <ol class="flex flex-wrap mt-3 list-none">
                     <li v-for="player in data.players.list" :key="player.uuid">
                       <a :href="`https://minecraftuuid.com/?search=${player.uuid}`" rel="sponsored"
                          class="flex items-center gap-3 px-3 py-2 card card-hover">
+<!--                        懒加载图片-->
                         <img loading="lazy"
                              width="24"
                              height="24"
@@ -203,6 +204,7 @@ export default {
 
 .server-players {
   padding: 10px;
+  color: #6AC8FE;
 }
 
 .server-players ol {
@@ -219,11 +221,10 @@ export default {
 }
 
 .card {
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 0.5px solid rgba(0, 0, 0, 0.7);
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: var(--el-button-bg-color);
   cursor: pointer;
-  mix-blend-mode: lighten;
 }
 
 .card-hover:hover {
@@ -231,8 +232,8 @@ export default {
 }
 
 .font-mono {
-  font-family: 'Courier New', monospace;
-  color: #333;
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(0, 0, 0, 0.66);
 }
 
 .header-left {
