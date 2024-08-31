@@ -8,8 +8,9 @@
         <FrontInfo msg="CYMC 服务器中心(更新中)"/>
         <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
-        <!--        <CYMCServerStatus></CYMCServerStatus>-->
+<!--                <CYMCServerStatus></CYMCServerStatus>-->
 
+        <CQMUServerInformation></CQMUServerInformation>
         <el-divider>
           MUA联盟高校
         </el-divider>
