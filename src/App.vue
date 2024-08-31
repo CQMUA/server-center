@@ -10,7 +10,16 @@
         <Logos my="4"/>
 <!--                <CYMCServerStatus></CYMCServerStatus>-->
 
-        <CQMUServerInformation></CQMUServerInformation>
+        <div class="cqmu-server-container" style="display: flex; gap: 16px;">
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+          <CQMUServerInformation></CQMUServerInformation>
+        </div>
+
         <el-divider>
           MUA联盟高校
         </el-divider>
