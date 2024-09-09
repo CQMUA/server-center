@@ -1,7 +1,6 @@
 <template>
   <div class="server-status">
     <StatusUpdate @refresh="fetchServerStatus"></StatusUpdate>
-    <el-scrollbar max-height="368px" max-width="fit-content" :always="false">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
         这个学校或者组织没有服务器记录
       </div>
@@ -70,7 +69,7 @@
                     <li v-for="player in data.players.list" :key="player.uuid">
                       <a :href="`https://minecraftuuid.com/?search=${player.uuid}`" rel="sponsored"
                          class="flex items-center gap-3 px-3 py-2 card card-hover">
-<!--                        懒加载图片-->
+                        <!--                        懒加载图片-->
                         <img loading="lazy"
                              width="24"
                              height="24"
@@ -93,7 +92,6 @@
       <div v-else style="justify-content: center; align-self: center; text-align: center;">
         <el-row v-loading="loading"></el-row>
       </div>
-    </el-scrollbar>
   </div>
 </template>
 
@@ -123,6 +121,11 @@ export default {
       refreshing.value = true; // Set refreshing state to true
       loading.value = true;
       try {
+        const targetServers = ['MYCQMU', 'Test', 'Creative', 'HUB', 'MOD', 'MOD_TecH', 'Cherry'];
+
+        // Filter servers to include only those in targetServers
+        const filteredServers = Object.entries(props.servers).filter(([name]) => targetServers.includes(name));
+
         const requests = Object.entries(props.servers).map(([name, address]) => {
           return axios.get(`https://api.mcstatus.io/v2/status/java/${address}`);
         });

@@ -5,12 +5,14 @@
       <!--      <Side></Side>-->
       <div w="full" py="4">
 
-        <FrontInfo msg="CYMC 服务器中心(更新中，腐竹很懒ovo)"/>
+        <FrontInfo msg="CYMC 服务器中心(更新中)"/>
         <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
-        <!--        <CYMCServerStatus></CYMCServerStatus>-->
+<!--                <CYMCServerStatus></CYMCServerStatus>-->
+
+        <CQMUServerInformation></CQMUServerInformation>
         <el-divider>
-          这是分割线
+          MUA联盟高校
         </el-divider>
 
         <div class="muaservers-container">
@@ -23,27 +25,27 @@
           </template>
         </div>
 
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
-        <ServerStatistic/>
-        <el-divider>
-          这是分割线
-        </el-divider>
+<!--        <ServerStatistic/>-->
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
 
 
-        <el-divider>
-          这是分割线
-        </el-divider>
-        <el-divider>
-          这是分割线
-        </el-divider>
-        <Footer></Footer>
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
+<!--        <el-divider>-->
+<!--          这是分割线-->
+<!--        </el-divider>-->
+<!--        <Footer></Footer>-->
       </div>
     </div>
   </el-config-provider>
@@ -119,7 +121,7 @@ const serverIds = [
   'CYMC',
   'CQUcraft',
   'SYUMC', // 香港树仁大学Minecraft组织
-  'SYUMC', // 新疆大学服务器
+  'SD', // 新疆大学服务器
   'Cube of Posts',
   'XDUcraft',
   'XJTUMC',
@@ -137,10 +139,122 @@ const serverIds = [
   'JNUcraft',
   'DDMC',
   'HNNU',
-  '中南林业科技大学Minecraft组织',
   'CSU-MC',
-  'HNNU',
-  'PlaceHolder',
+  'SCNU',
+  'XNJUMC',
+  'GLHTMC',
+  'GDYSLMC',
+  'WYUMC',
+  'GZHHMC',
+  'GDHYUMC',
+  'ZNLYKJUMC',
+  'PKUMC',
+  'THUnion',
+  'PKJUMC',
+  'BJUTMC',
+  'PKHKUMC',
+  'PKLGUMC',
+  'PKKJUMC',
+  'PKYUMC',
+  'CAUcraft',
+  'PKLYUMC',
+  'MineCUC',
+  'ZYCJUMC',
+  'HBDLUMC',
+  'PKISUMC',
+  'NKUMC',
+  'TJUUS',
+  'CAUCraft',
+  'HBGYUMC',
+  'HBLGUMC',
+  'CDYMC',
+  'HBJRMC',
+  'YJLGMC',
+  'TYLGUMC',
+  'IMUcraft-方块内大',
+  'JZXYMC',
+  'LNUCraft',
+  'NEUMC',
+  'DLJTUMC',
+  'DLUMC',
+  'NEUMCf',
+  'JLUCraft',
+  'CCZYYUMC',
+  'HITMC',
+  'HEUcraft',
+  'HDLGUMC',
+  'DHUcraft',
+  'SkyMinecraft',
+  'SHHYUMC',
+  'SIT-Minecraft',
+  'SHTechCraft',
+  'SHGMMC',
+  'MCSUDA',
+  'NHUMC',
+  'NJLGUMC',
+  'JSKJUMC',
+  'NJTU-MC',
+  'NJUUMC',
+  'HHUMC',
+  'NJFUcraft',
+  'JSUMC',
+  'NJMUMC',
+  'NUIST Craft',
+  'XZMUMC',
+  'ZGMUMC',
+  'SteaMC',
+  'JSJGMC',
+  'SZKJUMC',
+  'NJITmc',
+  'BBS',
+  'mczju',
+  'HDUcraft',
+  'JXUMC',
+  'NBUCraft',
+  'ZJWEU Craft',
+  'AHLGUMC',
+  'AHUTcraft',
+  'HBSFmc',
+  'XMUMC',
+  'HQUCraft',
+  'FJUTmincraft',
+  'FZU server',
+  'FJSFUMC',
+  'FJUTmincraft',
+  'JMUMC',
+  'XMJYUMC',
+  'FJSFXHMC',
+  'FJJXMC',
+  'NCUMC',
+  'NonCraft',
+  'JXSFUMC',
+  'MinecraftJUFE',
+  'NCGCMC',
+  'JDZYSZYUMC',
+  'GZSFMC',
+  'SDKJUMC',
+  'ZGSYUMCHD',
+  'QUSTMC',
+  'SDJZUcraft',
+  'NHPCA',
+  'DZMC',
+  'SDAUpixel',
+  'HNLGUMC',
+  'ZZUMC',
+  'HNKJUMC',
+  'ZYGXYMC',
+  'HNUMC',
+  'HNSFUMC',
+  'NYSFMC',
+  'SQSFMC',
+  'LYLGMC',
+  '珞珈MC',
+  'HUstone',
+  'MCUG',
+  'WHUTcraft',
+  'GFKJUMC',
+  'ZNMZUMC',
+  'HBYYMC',
 ];
 
 
