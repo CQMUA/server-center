@@ -296,13 +296,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
-      MYCQMU: 'mc.cqmu.online',
-      Test: 's10.s100.vip:33860',
-      Creative: 'dev.cqmu.online',
-      HUB: 'hub.cqmu.online',
-      MOD: 'mod.cqmu.online',
-      MOD_TecH: 'tech.mod.cqmu.online',
-      Cherry: "cherry.cqmu.online",
+      lobby: 'lobby2.cqmu.online:23233',
     }
   },
   {

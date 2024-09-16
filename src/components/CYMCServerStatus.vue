@@ -1,5 +1,5 @@
 <template>
-  <el-space style="width: 100%" fill>
+  <el-space style="width: 78%;align-content: center;align-self: center;justify-content: center" fill>
     <div>
       <el-button @click="setLoading">Click me to reload</el-button>
     </div>
@@ -7,7 +7,7 @@
         style="display: flex; gap: 8px"
         :loading="loading"
         animated
-        :count="3"
+        :count="4"
     >
       <template #template>
         <div style="flex: 1">
@@ -84,6 +84,11 @@ onMounted(() => {
       imgUrl:
           'https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg',
       name: 'Horse',
+    },
+    {
+      imgUrl:
+          'https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg',
+      name: 'Mountain Lion',
     },
     {
       imgUrl:

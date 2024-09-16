@@ -10,7 +10,7 @@
         <Logos my="4"/>
 <!--                <CYMCServerStatus></CYMCServerStatus>-->
 
-        <CQMUServerInformation></CQMUServerInformation>
+<!--        <CQMUServerInformation></CQMUServerInformation>-->
         <el-divider>
           MUA联盟高校
         </el-divider>
