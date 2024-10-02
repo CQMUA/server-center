@@ -139,7 +139,7 @@ const serverInfo = [
     name: '南京大学Minecraft社',
     community: 'NMO',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/b6b9c5d1b3f4e39978dd0d5e2949bb7953611c1b.jpg',
-    avatar_university: 'https://img.sogoucdn.com/v2/thumb/crop/xy/ai/x/0/y/0/w/132/h/132/iw/30/ih/30/t/0/ir/3/retype_exclude_gif/ext/auto/q/80?t=2&appid=201115&url=https%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F6611%2Fcut-20210713155323-1750234654_jpg_427_536_36877.jpg%2F300',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/fb/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.svg/360px-%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.svg.png',
     link: 'https://wiki.nmo.net.cn/',
     servers: {
       Sevtech_Ages: 'mod1.nmo.net.cn:20481',
@@ -296,7 +296,13 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
-      lobby: 'lobby2.cqmu.online:23233',
+      main: 'play.cymc.club',
+      gz_test: 'gz.play.cymc.club',
+      cd_node: 'cdp.play.cymc.club',
+      sq_node: 'mc.cytouhou.club',
+      mua: 'mua.cymc.club',
+      mua_zj: 'zj.mua.cymc.club',
+      mua_sh: 'sh.mua.cymc.club',
     }
   },
   {
@@ -773,8 +779,8 @@ const serverInfo = [
     id: 'HBLGUMC',
     name: '华北理工大学Minecraft组织',
     community: 'HBLGUMC',
-    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/75/NCST_seal.svg/400px-NCST_seal.svg.png',
-    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/75/NCST_seal.svg/400px-NCST_seal.svg.png',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/6/69/NCST_Logo_Since_2024.svg/400px-NCST_Logo_Since_2024.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/6/69/NCST_Logo_Since_2024.svg/400px-NCST_Logo_Since_2024.svg.png',
     link: 'https://www.mualliance.cn/archives/1212',
     servers: {},
   },
