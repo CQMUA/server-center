@@ -140,7 +140,7 @@ const serverInfo = [
     community: 'NMO',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/b6b9c5d1b3f4e39978dd0d5e2949bb7953611c1b.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/fb/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.svg/360px-%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.svg.png',
-    link: 'https://wiki.nmo.net.cn/',
+    link: 'https://www.nmo.net.cn/',
     servers: {
       Sevtech_Ages: 'mod1.nmo.net.cn:20481',
       Hypixel: 'hypixel.net',
@@ -196,7 +196,35 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/04/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/76/Dalian_University_of_Technology_logo.svg/400px-Dalian_University_of_Technology_logo.svg.png',
     link: 'https://mcweb.unsafe.top/',
-    servers: {}
+    servers: {
+      dggd: 'mc.outside.dlut.world:40066',
+      IPV6: 'mc6.dlut.world:25568',
+      IPV4: 'mc.outside.dlut.world:25568',
+    }
+  },
+  {
+    id: 'YSUMC',
+    name: '燕山大学Minecraft学生同好者协会',
+    community: 'YSUMC',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/04/%E9%B8%9F%E5%A4%A7%EF%BC%81.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/1/15/Yanshan_University_logo.svg/400px-Yanshan_University_logo.svg.png',
+    link: 'https://www.ysumc.club/',
+    servers: {},
+  },
+  {
+    id: 'Amethyst-Craft',
+    name: '同济大学Minecraft紫晶学生社',
+    community: 'Amethyst Craft',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/10/%E5%BE%BD%E6%A0%87.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/f8/Tongji_University_Emblem.svg/400px-Tongji_University_Emblem.svg.png',
+    link: 'https://www.tongji-mc.cn/',
+    servers: {
+      sdf: 'survival.tongji-mc.cn',
+      mzf: 'survival.tongji-mc.cn',
+      minigame: 'minigame.tongji-mc.cn',
+      lhf: 'rbd.sitmc.club',
+      mua: 'lobby.mualliance.ltd'
+    },
   },
   {
     id: 'SDTBUcraft',
@@ -241,7 +269,9 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/12/西安建筑科技大学-300x300.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/4/48/%E8%A5%BF%E5%AE%89%E5%BB%BA%E7%AD%91%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.jpg',
     link: 'https://www.xauatcraft.com/',
-    servers: {}
+    servers: {
+      main: 'play.xauatcraft.com',
+    }
   },
   {
     id: 'XSUcraft',
@@ -296,11 +326,11 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
-      main: 'play.cymc.club',
       gz_test: 'gz.play.cymc.club',
       cd_node: 'cdp.play.cymc.club',
-      sq_node: 'mc.cytouhou.club',
-      mua: 'mua.cymc.club',
+      sq_node: 'mc.cytouhou.top',
+      mua_sc: 'sc.mua.cymc.club',
+      mua_hb: 'hb.mua.cymc.club',
       mua_zj: 'zj.mua.cymc.club',
       mua_sh: 'sh.mua.cymc.club',
     }
@@ -865,6 +895,7 @@ const serverInfo = [
     link: 'http://mc.bobby.com.cn/',
     servers: {},
   },
+
   {
     id: 'DLUMC',
     name: '大连大学服务器',
@@ -1576,16 +1607,90 @@ const serverInfo = [
     link: 'https://www.mualliance.cn/archives/2528',
     servers: {},
   },
+  {
+    id: 'TaruCraft',
+    name: '塔里木大学胡杨方块社',
+    community: 'TaruCraft',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/08/logo-1.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/f/f8/Tarim_University_logo.jpg',
+    link: 'https://www.tarucraft.club/',
+    servers: {
+      main: 'taru.mualliance.cn',
+      mua: 'union.tarucraft.club'
+    },
+  },
+  {
+    id: 'SDUcraft',
+    name: '山东大学学生Minecraft社团',
+    community: 'SDUcraft',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/12/5d6034a85edf8db1cb1311832471ca54564e9358de80.webp',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/9/94/Shandong_University.jpg',
+    link: 'https://www.mualliance.cn/archives/1101',
+    servers: {},
+  },
+  {
+    id: 'SMUNW',
+    name: '上海海事大学沙盒创造社',
+    community: 'SMU Night Walker',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/01/QQ%E5%9B%BE%E7%89%8720240102003253-e1704263682840.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/8/89/Shanghai_Maritime_University.svg/440px-Shanghai_Maritime_University.svg.png',
+    link: 'https://8888.band/index.html',
+    servers: {
+      SMU: '24.221.43.171:9000',
+    },
+  },
+
+  {
+    id: 'QUSTMC',
+    name: '青岛科技大学Minecraft协会',
+    community: 'QUSTMC',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/05/%E5%9B%BE%E7%89%87-9.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/6/6c/Qingdao_University_of_Science_and_Technology_logo.svg/400px-Qingdao_University_of_Science_and_Technology_logo.svg.png',
+    link: 'https://www.mualliance.cn/archives/579',
+    servers: {},
+  },
+
+  {
+    id: 'SWPUMC',
+    name: '西南石油大学Minecraft萤石社',
+    community: 'SWPUMC',
+    avatar: '',
+    avatar_university: '',
+    link: '',
+    servers: {},
+  },
+
+  {
+    id: 'WBC',
+    name: '温州商学院Minecraft社',
+    community: 'swustmc',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/02/0cd46f661e72113c6b00c3b2964e9426.png',
+    avatar_university: 'https://img.gaoxiaojob.com/uploads/company_logo/20220326144205_89206.jpg',
+    link: 'https://www.mualliance.cn/archives/1816',
+    servers: {
+      main: 'play.swustmc.fun'
+    },
+  },
+  {
+    id: 'MineCUG',
+    name: '中国地质大学（武汉）岩石纪元Minecraft社团',
+    community: 'MineCUG',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/08/Image_1724322400705.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/3/32/CUGW_seal.svg/400px-CUGW_seal.svg.png',
+    link: 'https://minecug.github.io/',
+    servers: {},
+  },
   // 模板文件
-  // {
-  //   id: '',
-  //   name: '',
-  //   community: '',
-  //   avatar: '',
-  //   avatar_university: '',
-  //   link: '',
-  //   servers: {},
-  // },
+  {
+    id: '',
+    name: '',
+    community: '',
+    avatar: '',
+    avatar_university: '',
+    link: '',
+    servers: {},
+  },
+
 
   // {
   //   id: 'PlaceHolder',

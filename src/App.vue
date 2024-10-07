@@ -8,9 +8,9 @@
         <FrontInfo msg="CYMC 服务器中心(更新中)"/>
         <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
-<!--                <CYMCServerStatus></CYMCServerStatus>-->
+        <!--                <CYMCServerStatus></CYMCServerStatus>-->
 
-<!--        <CQMUServerInformation></CQMUServerInformation>-->
+        <!--        <CQMUServerInformation></CQMUServerInformation>-->
         <el-divider>
           MUA联盟高校
         </el-divider>
@@ -25,27 +25,27 @@
           </template>
         </div>
 
-<!--        <el-divider>-->
-<!--          这是分割线-->
-<!--        </el-divider>-->
+        <!--        <el-divider>-->
+        <!--          这是分割线-->
+        <!--        </el-divider>-->
 
-<!--        <el-divider>-->
-<!--          这是分割线-->
-<!--        </el-divider>-->
+        <!--        <el-divider>-->
+        <!--          这是分割线-->
+        <!--        </el-divider>-->
 
-<!--        <ServerStatistic/>-->
-<!--        <el-divider>-->
-<!--          这是分割线-->
-<!--        </el-divider>-->
+        <!--        <ServerStatistic/>-->
+        <!--        <el-divider>-->
+        <!--          这是分割线-->
+        <!--        </el-divider>-->
 
 
-<!--        <el-divider>-->
-<!--          这是分割线-->
-<!--        </el-divider>-->
-<!--        <el-divider>-->
-<!--          这是分割线-->
-<!--        </el-divider>-->
-<!--        <Footer></Footer>-->
+        <!--        <el-divider>-->
+        <!--          这是分割线-->
+        <!--        </el-divider>-->
+        <!--        <el-divider>-->
+        <!--          这是分割线-->
+        <!--        </el-divider>-->
+        <!--        <Footer></Footer>-->
       </div>
     </div>
   </el-config-provider>
@@ -101,27 +101,35 @@ body {
 // import Tabs from "~/components/Navigation/CommonTabs.vue";
 
 const serverIds = [
+  'NPUCRAFT',
+  'HDUART',
   'SJTU',
   'NJU',
-  'NPUCRAFT',
   'FDCRAFT',
   'ZJUTMC',
   'BCL',
   'DUTCRAFT',
+  'YSUMC',
+  'Amethyst-Craft',
+  'TaruCraft',
   'SDTBUcraft',
   'SJZUMC',
   'SZTUMC',
   'SUESMC',
+  'SDUcraft',
+  'SMUNW',
+  'QUSTMC',
   'XAUATcraft',
   'XSUcraft',
-  'NCWUMC',
-  'HDUART',
-  'ZJUT_MINECRAFT',
   'SWPUMC',
+  'WBC',
+  'ZJUT_MINECRAFT',
+  'NCWUMC',
+  'SWYSTMC',
+  'MineCUG',
   'CYMC',
   'CQUcraft',
-  'SYUMC', // 香港树仁大学Minecraft组织
-  'SD', // 新疆大学服务器
+  'SD',
   'Cube of Posts',
   'XDUcraft',
   'XJTUMC',
