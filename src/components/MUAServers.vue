@@ -187,7 +187,11 @@ const serverInfo = [
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/01/e0bedcf698b6720dc1b847b1d102859c9d568364.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/0/07/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg/400px-%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6logo.svg.png',
     link: 'https://www.mualliance.cn/archives/147',
-    servers: {}
+    servers: {
+      smp: 'smp.seu.littlehfox.top',
+      mod: 'mod.seu.littlehfox.top',
+
+    }
   },
   {
     id: 'DUTCRAFT',
@@ -322,7 +326,7 @@ const serverInfo = [
     id: 'CYMC',
     name: '重庆医科大学Minecraft组织',
     community: 'CYMC',
-    avatar: "https://www.mualliance.cn/wp-content/uploads/2024/06/cropped-cropped-logo-Photoroom-768x768.png",
+    avatar: "https://www.cqmu.online/wp-content/uploads/2024/10/%E4%B8%8B%E8%BD%BD__1_-removebg-preview.png",
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
@@ -333,6 +337,7 @@ const serverInfo = [
       mua_hb: 'hb.mua.cymc.club',
       mua_zj: 'zj.mua.cymc.club',
       mua_sh: 'sh.mua.cymc.club',
+      mua_sx: 'sx.mua.cymc.club'
     }
   },
   {
@@ -342,7 +347,10 @@ const serverInfo = [
     avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/74/Chongqing_University_logo.svg/300px-Chongqing_University_logo.svg.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/74/Chongqing_University_logo.svg/300px-Chongqing_University_logo.svg.png',
     link: 'https://www.mualliance.cn/archives/1498',
-    servers: {},
+    servers: {
+      SMP2: 's8.yxsjmc.cn:20051',
+      SMP: '101.43.169.100:25565',
+    },
   },
   {
     id: 'SYUMC',
@@ -1681,15 +1689,60 @@ const serverInfo = [
     servers: {},
   },
   // 模板文件
-  {
-    id: '',
-    name: '',
-    community: '',
-    avatar: '',
-    avatar_university: '',
-    link: '',
-    servers: {},
-  },
+  // {
+  //   id: 'CubeSWU',
+  //   name: '西南大学',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
+  // {
+  //   id: '',
+  //   name: '',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
+  // {
+  //   id: '',
+  //   name: '',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
+  // {
+  //   id: '',
+  //   name: '',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
+  // {
+  //   id: '',
+  //   name: '',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
+  // {
+  //   id: '',
+  //   name: '',
+  //   community: '',
+  //   avatar: '',
+  //   avatar_university: '',
+  //   link: '',
+  //   servers: {},
+  // },
 
 
   // {
