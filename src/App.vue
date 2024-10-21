@@ -5,10 +5,15 @@
       <!--      <Side></Side>-->
       <div w="full" py="4">
 
-        <FrontInfo msg="CYMC 服务器中心(更新中)"/>
+        <FrontInfo msg="CQMUA 服务器中心（更新中）"/>
         <!--        <Tabs></Tabs>-->
         <Logos my="4"/>
         <!--                <CYMCServerStatus></CYMCServerStatus>-->
+        <el-divider>
+          CQMUA联盟高校
+        </el-divider>
+
+
 
         <!--        <CQMUServerInformation></CQMUServerInformation>-->
         <el-divider>

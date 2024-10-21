@@ -348,8 +348,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/74/Chongqing_University_logo.svg/300px-Chongqing_University_logo.svg.png',
     link: 'https://www.mualliance.cn/archives/1498',
     servers: {
-      SMP2: 's8.yxsjmc.cn:20051',
-      SMP: '101.43.169.100:25565',
+      SMP: 'cqu.play.cqmua.cn',
     },
   },
   {

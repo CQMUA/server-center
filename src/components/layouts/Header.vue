@@ -29,10 +29,10 @@ import {
         <el-icon color="green">
           <WindPower/>
         </el-icon>
-        CYMC
+        大项目
       </template>
-      <el-menu-item index="2-1">我的重医</el-menu-item>
-      <el-menu-item index="2-2" disabled>生电服</el-menu-item>
+      <el-menu-item index="2-1">像素大学城</el-menu-item>
+      <el-menu-item index="2-2" disabled>联合生电服</el-menu-item>
       <el-menu-item index="2-3" disabled>樱花界</el-menu-item>
     </el-sub-menu>
 
@@ -45,26 +45,26 @@ import {
         互通服
       </template>
       <el-menu-item index="3-1">
-        <el-link :icon="Select" href="https://www.mualliance.cn/archives/719" target="_blank" onclick="true">MUA联合服
+        <el-link :icon="Select" href="#" target="_blank" onclick="true">CQMUA联合生存服（即将开放）
         </el-link>
 
       </el-menu-item>
       <el-menu-item index="3-2">
-        <el-link :icon="Select" target="_blank" href="https://www.mualliance.cn/archives/2095" onclick="true">MUA联合大厅</el-link>
+        <el-link :icon="Select" target="_blank" href="#" onclick="true">CQMUA联合大厅（即将开放）</el-link>
       </el-menu-item>
       <el-menu-item index="3-3">
-        <el-link :icon="StarFilled" href="https://hypixel.net/" target="_blank" disabled>小游戏服
+        <el-link :icon="StarFilled" href="https://www.yuque.com/pguide/cymc/tp82a4okpfm8hycd" target="_blank">樱花随想（CYMC）
         </el-link>
       </el-menu-item>
     </el-sub-menu>
 
     <el-menu-item index="4">
-      <el-link :icon="Check" href="" target="_blank">外置登录</el-link>
+      <el-link :icon="Check" href="https://skin.jntm.site/" target="_blank">CQMUA外置登录</el-link>
     </el-menu-item>
 
 
     <el-menu-item>
-      <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">CYMC用户中心</el-link>
+      <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">CQMUA用户中心</el-link>
     </el-menu-item>
     <el-menu-item>
       <el-link :icon="Position" href="https://www.mualliance.cn/server" target="_blank">MUA</el-link>
