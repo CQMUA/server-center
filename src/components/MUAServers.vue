@@ -1340,7 +1340,7 @@ const serverInfo = [
     name: '福建江夏学院Minecraft组织',
     community: 'FJJXMC',
     avatar: '123.png',
-    avatar_university: '../public/123.png',
+    avatar_university: '/123.png',
     link: 'https://www.mualliance.cn/archives/2565',
     servers: {},
   },
