@@ -361,7 +361,7 @@ const serverInfo = [
     community: 'SYUMC',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2024/01/84e9fc63fb77db2c9cadbec5a4f119c1-320x240.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/72/Hong_Kong_Shue_Yan_University_logo.svg/360px-Hong_Kong_Shue_Yan_University_logo.svg.png',
-    link: 'http://mc.hksyu.com.cn/',
+    link: 'https://mc.hksyu.com.cn/',
     servers: {},
   },
   {
@@ -377,7 +377,7 @@ const serverInfo = [
     id: 'Cube of Posts',
     name: '西安邮电大学邮立方',
     community: 'Cube of Posts',
-    avatar: 'http://p.qlogo.cn/gh/779877449/779877449/0/',
+    avatar: 'https://p.qlogo.cn/gh/779877449/779877449/0/',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/3/35/%E8%A5%BF%E5%AE%89%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%A0%87%E8%AF%86.jpg/300px-%E8%A5%BF%E5%AE%89%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E6%A0%87%E8%AF%86.jpg',
     link: 'https://cop.cooo.site/',
     servers: {},
@@ -667,7 +667,7 @@ const serverInfo = [
     community: 'THUnion',
     avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/08/%E6%B8%85%E5%8D%8E-360x240.jpg',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tsinghua_University_Logo.svg/400px-Tsinghua_University_Logo.svg.png',
-    link: 'http://wiki.thunion.club/',
+    link: 'https://wiki.thunion.club/',
     servers: {},
   },
   {
@@ -903,7 +903,7 @@ const serverInfo = [
     community: 'DLJTUMC',
     avatar: 'https://upload.wikimedia.org/wikipedia/zh/c/ce/Logo_of_Dalian_Jiaotong_University.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/c/ce/Logo_of_Dalian_Jiaotong_University.png',
-    link: 'http://mc.bobby.com.cn/',
+    link: 'https://mc.bobby.com.cn/',
     servers: {},
   },
 
@@ -1028,8 +1028,8 @@ const serverInfo = [
     id: 'SHGMMC',
     name: '上海工艺美术职业学院工美Minecraft社区',
     community: 'SHGMMC',
-    avatar: 'http://zjxhszh.com/__local/B/D6/35/170D323BA6716B2400EE726C879_2915A8A6_269FD.png?e=.png',
-    avatar_university: 'http://zjxhszh.com/__local/B/D6/35/170D323BA6716B2400EE726C879_2915A8A6_269FD.png?e=.png',
+    avatar: 'https://zjxhszh.com/__local/B/D6/35/170D323BA6716B2400EE726C879_2915A8A6_269FD.png?e=.png',
+    avatar_university: 'https://zjxhszh.com/__local/B/D6/35/170D323BA6716B2400EE726C879_2915A8A6_269FD.png?e=.png',
     link: 'https://www.mualliance.cn/archives/1858',
     servers: {},
   },
@@ -1691,25 +1691,31 @@ const serverInfo = [
     link: 'https://minecug.github.io/',
     servers: {},
   },
-  // 模板文件
-  // {
-  //   id: 'CubeSWU',
-  //   name: '西南大学',
-  //   community: '',
-  //   avatar: '',
-  //   avatar_university: '',
-  //   link: '',
-  //   servers: {},
-  // },
-  // {
-  //   id: '',
-  //   name: '',
-  //   community: '',
-  //   avatar: '',
-  //   avatar_university: '',
-  //   link: '',
-  //   servers: {},
-  // },
+  {
+    id: 'CubeSWU',
+    name: '西南大学兰樟Minecraft组织',
+    community: 'SWUMC',
+    avatar: '/swu-logo.svg',
+    avatar_university: '/swu-logo.svg',
+    link: 'https://www.mualliance.cn/archives/2777',
+    servers: {
+      main: 'mc.cqmua.cn',
+      mobile: 'play.swumc.top',
+      unicom: 'direct.swumc.top',
+    },
+  },
+  {
+    id: 'CQUSTMC',
+    name: '重庆科技大学Minecraft组织',
+    community: 'CQUSTMC',
+    avatar: '/CQUST.png',
+    avatar_university: '/CQUST.png',
+    link: 'https://www.mualliance.cn/archives/2328',
+    servers: {
+      mc: 'mc.xfywz.cn:25672',
+      main: 'mc.cqmua.cn',
+    },
+  },
   // {
   //   id: '',
   //   name: '',
@@ -1773,18 +1779,6 @@ const serverInfo = [
 .muaservers:hover {
 
   filter: drop-shadow(0 0 3em #01ffea);
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.46s;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0.23;
-}
-
-.fade-enter-to, .fade-leave-from {
-  opacity: 1;
 }
 
 </style>

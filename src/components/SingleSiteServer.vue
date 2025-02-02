@@ -3,7 +3,7 @@
     <StatusUpdate @refresh="fetchServerStatus"></StatusUpdate>
     <el-scrollbar max-height="368px" max-width="fit-content" :always="false">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
-        该学校或组织<span style="color: red; font-weight: bold;">没有</span>公开的服务器记录，联系<a style="color: #154297" href="https://qm.qq.com/q/3QTOMQKgMw" target="_blank">开发人员</a> 添加。
+        该学校或组织<span style="color: red; font-weight: bold;">没有</span>公开的服务器记录，联系<a style="color: #6b778c" href="https://qm.qq.com/q/3QTOMQKgMw" target="_blank">开发人员</a> 添加。
       </div>
       <div v-else-if="showServerCountMessage" style="text-align: center; padding: 10px">
         该学校或组织有 <span style="color: green; font-weight: bold;">{{ Object.keys(servers).length }}</span> 个公开的服务器记录，请点击刷新按钮。
