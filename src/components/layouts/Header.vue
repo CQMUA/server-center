@@ -29,7 +29,7 @@ import {
         </el-icon>
         大项目
       </template>
-      <el-menu-item index="2-1">像素大学城</el-menu-item>
+      <el-menu-item index="2-1"><el-link href="" target="_blank">像素大学城</el-link></el-menu-item>
     </el-sub-menu>
 
 

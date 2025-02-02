@@ -50,7 +50,7 @@
             </el-link>
           </p>
         </div>
-        <el-divider>MC服务器</el-divider>
+        <el-divider>在线服务器状态</el-divider>
         <SingleSiteServer :servers="currentServerInfo.servers"></SingleSiteServer>
 
       </template>

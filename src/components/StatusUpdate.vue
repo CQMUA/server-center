@@ -41,8 +41,8 @@ const handleRefresh = async () => {
 
     setTimeout(() => {
       refreshSuccess.value = false;
-    }, 1500);
-  }, 2000);
+    }, 2500);
+  }, 3000);
 };
 </script>
 

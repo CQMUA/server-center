@@ -3,20 +3,23 @@
     <StatusUpdate @refresh="fetchServerStatus"></StatusUpdate>
     <el-scrollbar max-height="368px" max-width="fit-content" :always="false">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
-        该学校或组织没有公开的服务器记录，请联系管理员添加。
+        该学校或组织<span style="color: red; font-weight: bold;">没有</span>公开的服务器记录，联系<a style="color: #154297" href="https://qm.qq.com/q/3QTOMQKgMw" target="_blank">开发人员</a> 添加。
+      </div>
+      <div v-else-if="showServerCountMessage" style="text-align: center; padding: 10px">
+        该学校或组织有 <span style="color: green; font-weight: bold;">{{ Object.keys(servers).length }}</span> 个公开的服务器记录，请点击刷新按钮。
       </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
           <div class="header">
             <div class="header-left">
               <el-icon size="30" v-if="data.online && !refreshing" color="green">
-                <CircleCheckFilled />
+                <CircleCheckFilled/>
               </el-icon>
               <el-icon size="30" v-else-if="!data.online && !refreshing" color="red">
-                <CircleCloseFilled />
+                <CircleCloseFilled/>
               </el-icon>
               <el-icon size="30" v-if="refreshing" color="orange">
-                <Loading />
+                <Loading/>
               </el-icon>
               <div class="copy-box">
                 <span :class="['server-address', { online: data.online }]">
@@ -27,10 +30,10 @@
                       @click="data.online ? copyToClipboard(data.host, data.port, index) : null"
                   >
                     <template v-if="copySuccess[index]">
-                      <Check />
+                      <Check/>
                     </template>
                     <template v-else>
-                      <CopyDocument />
+                      <CopyDocument/>
                     </template>
                   </el-icon>
                 </span>
@@ -41,7 +44,7 @@
             <el-row :gutter="40">
               <el-col :span="4">
                 <div style="justify-content: center; align-self: center">
-                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon" />
+                  <img :src="getServerIcon(data)" alt="Server Icon" class="server-icon"/>
                 </div>
               </el-col>
               <el-col :span="20">
@@ -70,7 +73,6 @@
                     <li v-for="player in data.players.list" :key="player.uuid">
                       <a :href="`https://minecraftuuid.com/?search=${player.uuid}`" rel="sponsored"
                          class="flex items-center gap-3 px-3 py-2 card card-hover">
-<!--                        懒加载图片-->
                         <img loading="lazy"
                              width="24"
                              height="24"
@@ -98,15 +100,15 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import {ref} from 'vue';
 import axios from 'axios';
 import StatusUpdate from './StatusUpdate.vue'; // Import the StatusUpdate component
 import defaultIcon from '../assets/bingo_cat.gif';
-import { CircleCheckFilled, CircleCloseFilled, CopyDocument, Check, Loading } from "@element-plus/icons-vue"; // Import Loading icon
-import { ElMessage } from 'element-plus';
+import {CircleCheckFilled, CircleCloseFilled, CopyDocument, Check, Loading} from "@element-plus/icons-vue"; // Import Loading icon
+import {ElMessage} from 'element-plus';
 
 export default {
-  components: { StatusUpdate, CopyDocument, Check, CircleCloseFilled, CircleCheckFilled, Loading },
+  components: {StatusUpdate, CopyDocument, Check, CircleCloseFilled, CircleCheckFilled, Loading},
   props: {
     servers: {
       type: Object,
@@ -118,10 +120,12 @@ export default {
     const loading = ref(false);
     const copySuccess = ref({});
     const refreshing = ref(false); // New state for refreshing
+    const showServerCountMessage = ref(true); // New state for showing server count message
 
     const fetchServerStatus = async () => {
       refreshing.value = true; // Set refreshing state to true
       loading.value = true;
+      showServerCountMessage.value = false; // Hide server count message on refresh
       try {
         const requests = Object.entries(props.servers).map(([name, address]) => {
           return axios.get(`https://api.mcstatus.io/v2/status/java/${address}`);
@@ -167,6 +171,7 @@ export default {
       loading,
       copySuccess,
       refreshing, // Expose refreshing state
+      showServerCountMessage, // Expose showServerCountMessage state
       fetchServerStatus,
       getServerIcon,
       copyToClipboard
