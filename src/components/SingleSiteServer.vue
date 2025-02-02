@@ -3,7 +3,7 @@
     <StatusUpdate @refresh="fetchServerStatus"></StatusUpdate>
     <el-scrollbar max-height="368px" max-width="fit-content" :always="false">
       <div v-if="!servers || Object.keys(servers).length === 0" style="text-align: center; padding: 10px">
-        这个学校或者组织没有服务器记录
+        该学校或组织没有公开的服务器记录，请联系管理员添加。
       </div>
       <div v-if="serverData.length">
         <div v-for="(data, index) in serverData" :key="index" class="server-item">
@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 import StatusUpdate from './StatusUpdate.vue'; // Import the StatusUpdate component
 import defaultIcon from '../assets/bingo_cat.gif';
@@ -161,10 +161,6 @@ export default {
         console.error('复制失败:', err);
       });
     };
-
-    onMounted(() => {
-      fetchServerStatus(); // Initial request
-    });
 
     return {
       serverData,

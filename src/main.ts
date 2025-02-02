@@ -1,13 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
-// import "~/styles/element/index.scss";
-
-// import ElementPlus from "element-plus";
-// import all element css, uncommented next line
-// import "element-plus/dist/index.css";
-
-// or use cdn, uncomment cdn link in `index.html`
+import { createLogto, LogtoConfig } from '@logto/vue';
 
 import "~/styles/index.scss";
 import "uno.css";
@@ -16,6 +9,12 @@ import "uno.css";
 import "element-plus/theme-chalk/src/message.scss";
 
 const app = createApp(App);
+const config: LogtoConfig = {
+    endpoint: 'https://auth.cqmu.online/',
+    appId: 'zhtd5bbhd9rgobudyiimh',
+};
+
+app.use(createLogto, config);
 // app.use(ElementPlus);
 app.mount("#app");
 

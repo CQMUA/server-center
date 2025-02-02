@@ -50,7 +50,7 @@
             </el-link>
           </p>
         </div>
-        <el-divider>在线服务器</el-divider>
+        <el-divider>MC服务器</el-divider>
         <SingleSiteServer :servers="currentServerInfo.servers"></SingleSiteServer>
 
       </template>
@@ -1069,7 +1069,7 @@ const serverInfo = [
     id: 'NJTU-MC',
     name: '南京工业大学服务器',
     community: 'NJTU-MC',
-    avatar: 'https://www.mualliance.ltd/wp-content/uploads/2023/07/图片-24.png',
+    avatar: 'https://www.mualliance.cn/wp-content/uploads/2023/04/NJTU-MC_Logo.png',
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/5/5d/Nanjing_Tech_University_logo.png',
     link: 'https://www.mualliance.cn/archives/428',
     servers: {},

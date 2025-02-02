@@ -1,18 +1,5 @@
 <template>
-  <div id="logo-container">
-    <a href="https://www.cqmu.online" target="_blank" class="logo-link">
-      <img src="https://www.cqmu.online/wp-content/uploads/2024/10/%E4%B8%8B%E8%BD%BD__1_-removebg-preview.png" class="logo" alt="CYMC logo"/>
-      <span class="tooltip">CYMC官网</span>
-    </a>
-    <a href="https://www.mualliance.cn/" target="_blank" class="MUA-logo">
-      <img src="../assets/MUA.png" class="logo vue" alt="Minecraft University Alliance"/>
-      <span class="tooltip">MUA官网</span>
-    </a>
-    <a href="https://www.minecraft.net//" target="_blank" class="Minecraft logo">
-      <img src="/minecraft.svg" class="logo element-plus" alt="Element Plus logo"/>
-      <span class="tooltip">Minecraft官网</span>
-    </a>
-  </div>
+
 </template>
 
 <style scoped>
@@ -68,3 +55,5 @@
   filter: drop-shadow(0 0 3em #55C97B);
 }
 </style>
+<script setup lang="ts">
+</script>

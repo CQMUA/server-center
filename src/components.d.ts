@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CallbackView: typeof import('./components/CallbackView.vue')['default']
     Collapse: typeof import('./components/DataDisplay/Collapse.vue')['default']
     CommonTabs: typeof import('./components/Navigation/CommonTabs.vue')['default']
     ConcretServerInfo: typeof import('./components/ConcretServerInfo.vue')['default']
@@ -18,6 +19,7 @@ declare module 'vue' {
     ElCollapse: typeof import('element-plus/es')['ElCollapse']
     ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElLink: typeof import('element-plus/es')['ElLink']
@@ -33,8 +35,11 @@ declare module 'vue' {
     InfiniteScroll: typeof import('./components/DataDisplay/InfiniteScroll.vue')['default']
     Logos: typeof import('./components/Logos.vue')['default']
     MUAServers: typeof import('./components/MUAServers.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     ServerStatistic: typeof import('./components/ServerStatistic.vue')['default']
     Side: typeof import('./components/layouts/Side.vue')['default']
+    SignIn: typeof import('./components/SignIn.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
     Skeleton: typeof import('./components/Skeleton.vue')['default']
     StatusUpdate: typeof import('./components/StatusUpdate.vue')['default']
