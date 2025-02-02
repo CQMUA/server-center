@@ -115,6 +115,8 @@ onMounted(() => {
   window.addEventListener('resize', updatePopoverStyle);
 });
 
+// TODO: 1: 修改为本地存储logo; 2:使用SQLite存储数据
+
 // 存储服务器信息的数组
 const serverInfo = [
   {
@@ -330,6 +332,7 @@ const serverInfo = [
     avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e1/Chongqing_Medical_University_logo.svg/400px-Chongqing_Medical_University_logo.svg.png',
     link: 'https://www.cqmu.online',
     servers: {
+      cqmua_main: 'mc.cqmua.cn',
       gz_test: 'gz.play.cymc.club',
       cd_node: 'cdp.play.cymc.club',
       sq_node: 'mc.cytouhou.top',
@@ -349,6 +352,7 @@ const serverInfo = [
     link: 'https://www.mualliance.cn/archives/1498',
     servers: {
       SMP: 'cqu.play.cqmua.cn',
+      cqmua_main: 'mc.cqmua.cn',
     },
   },
   {
