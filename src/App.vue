@@ -3,6 +3,7 @@
     <Header/>
     <div class="flex main-container">
       <div w="full" py="4">
+<!--        TODO: CQMUA info display-->
         <el-divider>
           CQMUA联盟高校
         </el-divider>
