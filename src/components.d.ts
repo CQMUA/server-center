@@ -11,6 +11,7 @@ declare module 'vue' {
     CommonTabs: typeof import('./components/Navigation/CommonTabs.vue')['default']
     ConcretServerInfo: typeof import('./components/ConcretServerInfo.vue')['default']
     CQMUServerInformation: typeof import('./components/CQMUServerInformation.vue')['default']
+    ElAnchorLink: typeof import('element-plus/es')['ElAnchorLink']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
