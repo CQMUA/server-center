@@ -1,16 +1,19 @@
 <script lang="ts" setup>
-// import { toggleDark } from '~/composables';
-import { Connection, MagicStick, Position, Select, StarFilled, WindPower } from '@element-plus/icons-vue';
+import {
+  Connection,
+  Files, FolderChecked, Lock,
+  MagicStick,
+  Platform,
+  Position,
+  Select,
+  StarFilled,
+  WindPower
+} from '@element-plus/icons-vue';
 </script>
 
 <template>
   <el-menu class="el-menu-demo" mode="horizontal">
-    <img alt="skin web" src="https://skin.jntm.site/logo.png" />
-<!--    <el-menu-item h="full" @click="toggleDark()" class="rm">-->
-<!--      <button class="border-none w-full bg-transparent cursor-pointer">-->
-<!--        <i inline-flex i="dark:ep-moon ep-sunny"/>-->
-<!--      </button>-->
-<!--    </el-menu-item>-->
+    <img alt="skin web" src="../../../public/CQMUA-Logo-transp.png" />
 
     <el-sub-menu index="2">
       <template #title>
@@ -19,7 +22,7 @@ import { Connection, MagicStick, Position, Select, StarFilled, WindPower } from 
         </el-icon>
         大项目
       </template>
-      <el-menu-item index="2-1"><el-link href="" target="_blank">像素大学城</el-link></el-menu-item>
+      <el-menu-item index="2-1"><el-link href="https://www.yuque.com/pguide/cqmua/kgpgp9k3el6n9etg" target="_blank">像素大学城</el-link></el-menu-item>
     </el-sub-menu>
 
     <el-sub-menu index="3">
@@ -33,25 +36,22 @@ import { Connection, MagicStick, Position, Select, StarFilled, WindPower } from 
         <el-link :icon="Select" href="https://www.yuque.com/pguide/cqmua/twwn635iq7te6pgp" target="_blank">CQMUA联合生存服</el-link>
       </el-menu-item>
       <el-menu-item index="3-2">
-        <el-link :icon="Select" target="_blank" href="https://www.yuque.com/pguide/cqmua/cv05kucsg1pe7igz">CQMUA联合大厅</el-link>
-      </el-menu-item>
-      <el-menu-item index="3-3">
-        <el-link :icon="StarFilled" href="https://www.yuque.com/pguide/cymc/tp82a4okpfm8hycd" target="_blank">樱花随想（CYMC）</el-link>
+        <el-link :icon="Select" target="_blank" href="https://www.yuque.com/pguide/cqmua/cv05kucsg1pe7igz" disabled>CQMUA联合大厅</el-link>
       </el-menu-item>
     </el-sub-menu>
 
     <el-sub-menu index="4">
       <template #title>
         <el-icon color="green">
-          <MagicStick/>
+          <Lock/>
         </el-icon>
         认证系统
       </template>
       <el-menu-item index="4-1">
-        <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank">CQMUA联合大厅皮肤站</el-link>
+        <el-link :icon="MagicStick" href="https://skin.jntm.site" target="_blank" disabled>CQMUA联合大厅皮肤站</el-link>
       </el-menu-item>
       <el-menu-item index="4-2">
-        <el-link :icon="MagicStick" href="https://p.mpsmc.cn/" target="_blank">CQMUA通行证</el-link>
+        <el-link :icon="FolderChecked" href="https://p.mpsmc.cn/" target="_blank">CQMUA通行证</el-link>
       </el-menu-item>
     </el-sub-menu>
 
@@ -63,10 +63,13 @@ import { Connection, MagicStick, Position, Select, StarFilled, WindPower } from 
         友情链接
       </template>
       <el-menu-item index="5-1">
-        <el-link :icon="Position" href="https://www.cqmua.cn" target="_blank">CQMUA官网</el-link>
+        <el-link :icon="Position" href="https://www.cqmua.cn" target="_blank" disabled>CQMUA官网</el-link>
       </el-menu-item>
       <el-menu-item index="5-2">
         <el-link :icon="Position" href="https://www.mualliance.cn/server" target="_blank">MUA官网</el-link>
+      </el-menu-item>
+      <el-menu-item>
+        <el-link :icon="Platform" href="https://github.com/CQMUA" target="_blank">Github</el-link>
       </el-menu-item>
     </el-sub-menu>
   </el-menu>

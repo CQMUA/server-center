@@ -7,12 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CallbackView: typeof import('./components/CallbackView.vue')['default']
     Collapse: typeof import('./components/DataDisplay/Collapse.vue')['default']
     CommonTabs: typeof import('./components/Navigation/CommonTabs.vue')['default']
     ConcretServerInfo: typeof import('./components/ConcretServerInfo.vue')['default']
     CQMUServerInformation: typeof import('./components/CQMUServerInformation.vue')['default']
-    CYMCServerStatus: typeof import('./components/CYMCServerStatus.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
@@ -21,7 +19,10 @@ declare module 'vue' {
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElLink: typeof import('element-plus/es')['ElLink']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
@@ -39,7 +40,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     ServerStatistic: typeof import('./components/ServerStatistic.vue')['default']
     Side: typeof import('./components/layouts/Side.vue')['default']
-    SignIn: typeof import('./components/SignIn.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
     Skeleton: typeof import('./components/Skeleton.vue')['default']
     StatusUpdate: typeof import('./components/StatusUpdate.vue')['default']
