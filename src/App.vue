@@ -23,12 +23,7 @@
         </div>
       </div>
     </div>
-    <el-dialog :visible.sync="dialogVisible" title="Welcome">
-      <span>123</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">OK</el-button>
-      </span>
-    </el-dialog>
+    <Footer/>
   </el-config-provider>
 </template>
 

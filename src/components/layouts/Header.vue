@@ -1,19 +1,18 @@
 <script lang="ts" setup>
 import {
   Connection,
-  Files, FolderChecked, Lock,
+  FolderChecked, Lock,
   MagicStick,
   Platform,
   Position,
   Select,
-  StarFilled,
   WindPower
 } from '@element-plus/icons-vue';
 </script>
 
 <template>
   <el-menu class="el-menu-demo" mode="horizontal">
-    <img alt="skin web" src="../../../public/CQMUA-Logo-transp.png" />
+    <img alt="skin web" src="/CQMUA-Logo-transp.png"/>
 
     <el-sub-menu index="2">
       <template #title>
@@ -22,7 +21,9 @@ import {
         </el-icon>
         大项目
       </template>
-      <el-menu-item index="2-1"><el-link href="https://www.yuque.com/pguide/cqmua/kgpgp9k3el6n9etg" target="_blank">像素大学城</el-link></el-menu-item>
+      <el-menu-item index="2-1">
+        <el-link href="https://www.yuque.com/pguide/cqmua/kgpgp9k3el6n9etg" target="_blank">像素大学城</el-link>
+      </el-menu-item>
     </el-sub-menu>
 
     <el-sub-menu index="3">
@@ -33,10 +34,14 @@ import {
         互通服
       </template>
       <el-menu-item index="3-1">
-        <el-link :icon="Select" href="https://www.yuque.com/pguide/cqmua/twwn635iq7te6pgp" target="_blank">CQMUA联合生存服</el-link>
+        <el-link :icon="Select" href="https://www.yuque.com/pguide/cqmua/twwn635iq7te6pgp" target="_blank">
+          CQMUA联合生存服
+        </el-link>
       </el-menu-item>
       <el-menu-item index="3-2">
-        <el-link :icon="Select" target="_blank" href="https://www.yuque.com/pguide/cqmua/cv05kucsg1pe7igz" disabled>CQMUA联合大厅</el-link>
+        <el-link :icon="Select" target="_blank" href="https://www.yuque.com/pguide/cqmua/cv05kucsg1pe7igz" disabled>
+          CQMUA联合大厅
+        </el-link>
       </el-menu-item>
     </el-sub-menu>
 
@@ -76,8 +81,4 @@ import {
 </template>
 
 <style>
-.rm {
-  display: flex;
-  margin-right: -10px;
-}
 </style>

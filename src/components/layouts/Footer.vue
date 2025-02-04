@@ -2,11 +2,10 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-text">
-        You can use TEXT to replace
-        FOOTER components using
+        2025 ©CQMUA | Open Source refers to <el-link href="https://github.com/CQMUA/CQMUA-MC-ServerCenter" target="_blank" underline>Github</el-link> | Wish you a good day!
       </div>
       <div class="footer-icons">
-        <el-icon><ChromeFilled /></el-icon>
+        <el-icon></el-icon>
         <!-- Add more icons here if needed -->
       </div>
     </div>
@@ -27,13 +26,14 @@ import { ChromeFilled } from '@element-plus/icons-vue';
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
 }
 
 .footer-text {
   font-size: 16px;
   color: #333;
+  text-align: center;
 }
 
 .footer-icons {

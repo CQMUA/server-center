@@ -119,13 +119,13 @@ export default {
     const serverData = ref([]);
     const loading = ref(false);
     const copySuccess = ref({});
-    const refreshing = ref(false); // New state for refreshing
-    const showServerCountMessage = ref(true); // New state for showing server count message
+    const refreshing = ref(false);
+    const showServerCountMessage = ref(true);
 
     const fetchServerStatus = async () => {
-      refreshing.value = true; // Set refreshing state to true
+      refreshing.value = true;
       loading.value = true;
-      showServerCountMessage.value = false; // Hide server count message on refresh
+      showServerCountMessage.value = false;
       try {
         const requests = Object.entries(props.servers).map(([name, address]) => {
           return axios.get(`https://api.mcstatus.io/v2/status/java/${address}`);
@@ -170,8 +170,8 @@ export default {
       serverData,
       loading,
       copySuccess,
-      refreshing, // Expose refreshing state
-      showServerCountMessage, // Expose showServerCountMessage state
+      refreshing,
+      showServerCountMessage,
       fetchServerStatus,
       getServerIcon,
       copyToClipboard
@@ -278,18 +278,6 @@ export default {
 .version-motd {
   text-align: -webkit-right;
   color: #55C97B;
-}
-
-.server-ipv4 {
-  padding-top: 1em;
-  font-size: 1em;
-  font-weight: bold;
-  font-family: "JetBrains Mono NL Thin", emoji;
-  justify-content: center;
-  text-align: -webkit-right;
-  word-wrap: break-word;
-  color: #ffffff;
-  mix-blend-mode: difference;
 }
 
 .body {
