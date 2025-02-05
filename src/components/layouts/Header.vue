@@ -8,12 +8,19 @@ import {
   Select,
   WindPower
 } from '@element-plus/icons-vue';
+import {toggleDark} from "~/composables";
 </script>
 
 <template>
   <el-menu class="el-menu-demo" mode="horizontal">
     <img alt="skin web" src="/CQMUA-Logo-transp.png"/>
-
+    <el-menu-item h="full" @click="toggleDark()" class="rm">
+      <button
+          class="border-none w-full bg-transparent cursor-pointer"
+      >
+        <i inline-flex i="dark:ep-moon ep-sunny"/>
+      </button>
+    </el-menu-item>
     <el-sub-menu index="2">
       <template #title>
         <el-icon color="green">

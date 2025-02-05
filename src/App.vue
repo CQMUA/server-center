@@ -3,14 +3,16 @@
     <Header/>
     <div class="flex main-container">
       <div w="full" py="4">
+<!--        <el-divider>CQMUA联合服务器</el-divider>-->
+<!--        <CQMUAServers></CQMUAServers>-->
         <el-divider>CQMUA联盟高校</el-divider>
-
         <div class="muaservers-container">
           <MUAServers id="CQUcraft" class="muaservers-item delay-0"/>
           <MUAServers id="CYMC" class="muaservers-item delay-0"/>
           <MUAServers id="CubeSWU" class="muaservers-item delay-0"/>
           <MUAServers id="CQUSTMC" class="muaservers-item delay-0"/>
         </div>
+        <CQMUAServers></CQMUAServers>
         <el-divider>MUA联盟高校</el-divider>
         <div class="muaservers-container">
           <template v-for="(server, index) in serverIds" :key="server">
