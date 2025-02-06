@@ -901,7 +901,6 @@ const serverInfo = [
     link: 'https://mc.bobby.com.cn/',
     servers: {},
   },
-
   {
     id: 'DLUMC',
     name: '大连大学服务器',
@@ -1645,7 +1644,6 @@ const serverInfo = [
       SMU: '24.221.43.171:9000',
     },
   },
-
   {
     id: 'QUSTMC',
     name: '青岛科技大学Minecraft协会',
@@ -1655,7 +1653,6 @@ const serverInfo = [
     link: 'https://www.mualliance.cn/archives/579',
     servers: {},
   },
-
   {
     id: 'SWPUMC',
     name: '西南石油大学Minecraft萤石社',
@@ -1665,7 +1662,6 @@ const serverInfo = [
     link: '',
     servers: {},
   },
-
   {
     id: 'WBC',
     name: '温州商学院Minecraft社',
@@ -1747,7 +1743,6 @@ const serverInfo = [
   //   link: '',
   //   servers: {},
   // },
-
 
   // {
   //   id: 'PlaceHolder',

@@ -1,38 +1,56 @@
 <template>
-  <a href="https://www.yuque.com/pguide/cqmua/twwn635iq7te6pgp" target="_blank" style="text-decoration: none">
-    <el-card class="server-card" shadow="hover">
-      <div class="server-header">
-        <el-avatar
-            class="server-icon"
-            size="large"
-            :src="serverIcon"
-        ></el-avatar>
+  <el-card class="server-card" shadow="hover">
+    <div class="server-header">
 
-        <div class="server-info">
-          <div class="server-title">{{ serverData.host }}<el-tag type="info">联合生存服</el-tag></div>
-          <div class="server-status">{{ serverData.online ? '在线' : '服务器好像挂了，寄，快联系Echoker和sectly' }}</div>
 
+      <div class="server-info">
+        <div class="server-title">
+          <el-avatar
+              class="server-icon"
+              size="large"
+              :src="serverIcon"
+          ></el-avatar>
+          <a href="https://www.yuque.com/pguide/cqmua/twwn635iq7te6pgp" target="_blank">{{ serverData?.host }}</a>
+          <CircleCheckFilled size="6" color="green" v-if="serverData?.online" />
+          <CircleCloseFilled size="6" color="red" v-else />
+        </div>
+        <div class="server-status">
+          <el-tag type="info">联合生存服</el-tag>
+          <el-tag type="warning">CQMUA通行证</el-tag>
         </div>
       </div>
-      <div class="server-body">
-        <div class="server-version" v-html="serverData.version?.name_html"></div>
-        <div class="server-motd" v-html="serverData.motd?.html"></div>
-        <div class="server-players">在线玩家: {{ serverData.players?.online }} / {{ serverData.players?.max }}</div>
-
+    </div>
+    <div class="server-body">
+      <div class="server-version" v-html="serverData?.version?.name_html"></div>
+      <div class="server-motd" v-html="serverData?.motd?.html"></div>
+      <div class="server-players">
+        <el-collapse v-model="activeCollapse">
+          <el-collapse-item title="在线玩家列表(点击查看id)" name="1">
+            <ul class="player-list">
+              <li v-for="player in serverData?.players?.list" :key="player.uuid">
+                <el-tooltip :content="player.name" placement="top">
+                  <img :src="`https://api.mineatar.io/head/${player.uuid}`" alt="Player Avatar" class="player-avatar"/>
+                </el-tooltip>
+              </li>
+            </ul>
+          </el-collapse-item>
+        </el-collapse>
       </div>
-    </el-card>
-  </a>
+    </div>
+  </el-card>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import {ref, onMounted} from 'vue';
 import axios from 'axios';
 import defaultIcon from '../assets/bingo_cat.gif';
-import { ElMessage } from 'element-plus';
+import {ElMessage} from 'element-plus';
+import {CircleCheckFilled, CircleCloseFilled} from "@element-plus/icons-vue";
 
-const serverData = ref({});
+const serverData = ref(null);
 const serverIcon = ref(defaultIcon);
 const loading = ref(false);
+const activeCollapse = ref(['1']); // Set the default expanded item
 
 const fetchServerStatus = async () => {
   loading.value = true;
@@ -81,6 +99,11 @@ onMounted(() => {
   font-weight: bold;
 }
 
+.server-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .server-status {
   font-size: 1em;
   color: #666;
@@ -102,6 +125,20 @@ onMounted(() => {
   color: #e59533;
 }
 
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.player-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
 @media (max-width: 768px) {
   .server-card {
     padding: 10px;
@@ -118,6 +155,7 @@ onMounted(() => {
 
   .server-title {
     font-size: 1.2em;
+    padding: 1em;
   }
 
   .server-status {
