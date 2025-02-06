@@ -1,8 +1,6 @@
 <template>
   <el-card class="server-card" shadow="hover">
     <div class="server-header">
-
-
       <div class="server-info">
         <div class="server-title">
           <el-avatar
@@ -26,13 +24,20 @@
       <div class="server-players">
         <el-collapse v-model="activeCollapse">
           <el-collapse-item title="在线玩家列表(点击查看id)" name="1">
-            <ul class="player-list">
-              <li v-for="player in serverData?.players?.list" :key="player.uuid">
-                <el-tooltip :content="player.name" placement="top">
-                  <img :src="`https://api.mineatar.io/head/${player.uuid}`" alt="Player Avatar" class="player-avatar"/>
+            <ul class="player-list" v-if="serverData?.players?.list">
+              <li v-for="player in serverData.players.list" :key="player.uuid">
+                <el-tooltip :content="getInnerHtml(player.name_html)" placement="top">
+                  <img loading="lazy"
+                       width="24"
+                       height="24"
+                       decoding="async"
+                       :src="`https://api.mineatar.io/head/${player.uuid}`"
+                       style="color: transparent;" alt="MCAvatars"/>
+                  <span class="font-mono text-sm" v-html="player.name_html" v-if="player.name_html"></span>
                 </el-tooltip>
               </li>
             </ul>
+            <p v-else>没有在线玩家</p>
           </el-collapse-item>
         </el-collapse>
       </div>
@@ -64,6 +69,12 @@ const fetchServerStatus = async () => {
   } finally {
     loading.value = false;
   }
+};
+
+const getInnerHtml = (htmlString) => {
+  const div = document.createElement('div');
+  div.innerHTML = htmlString;
+  return div.textContent || div.innerText || '';
 };
 
 onMounted(() => {
