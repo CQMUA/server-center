@@ -14,8 +14,4 @@ pnpm-lock.yaml
 *.log
 /.vscode/
 /.github/
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/element-plus-vite-starter.iml
-/.idea/inspectionProfiles/Project_Default.xml
 /.idea/
