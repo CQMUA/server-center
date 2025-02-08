@@ -1,30 +1,36 @@
-## Project setup
+# Introduction
+
+An online status monitoring interface for Java Edition Minecraft servers built with Vue3 and Element Plus. It is used in production environments for monitoring the status of CQMUA servers and MUA servers, with the API provided by api.mcstatus.io.
+
+# Development Environment
+
+> It is recommended to use [nvm](https://github.com/nvm-sh/nvm) for Node.js version management.
+>
+> Node.js >= 18.20.2
+
+## Project Setup
 
 ```bash
+nvm install lts
 npm install
-```
-
-### Compiles and hot-reloads for development
-
-```bash
 npm run dev
 ```
 
-### Compiles and minifies for production
+## Customizing Themes
 
-```bash
-npm run build
-```
+See `src/styles/element/index.scss`
 
-## Usage
+# Development Plan
 
-```bash
-git clone https://github.com/element-plus/element-plus-vite-starter
-cd element-plus-vite-starter
-npm i
-npm run dev
-```
-
-### Custom theme
-
-See `src/styles/element/index.scss`.
+- [ ] Query by ID
+- [ ] Province Classification
+- [x] Integration with YuGaoLian Joint Server
+    - [x] Template Design
+- [ ] OAuth2 Authentication
+    - [ ] CQMUA Account
+        - [ ] Admin CRUD
+    - [ ] JWT by Union CAS-logto
+- [x] Performance Optimization
+    - [x] No API requests on first page load
+    - [x] Requests only made when user clicks on school icon
+    - [x] No further requests after flip animation cycle completes
