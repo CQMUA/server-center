@@ -1707,6 +1707,233 @@ const serverInfo = [
       main: 'mc.cqmua.cn',
     },
   },
+
+
+
+
+
+
+  {
+    id: 'UEM',
+    name: '应大Minecraft同好会',
+    community: 'UEM',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/3/37/%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E5%A4%A7%E5%AD%A6.png/200px-%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E5%A4%A7%E5%AD%A6.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/3/37/%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E5%A4%A7%E5%AD%A6.png/200px-%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E5%A4%A7%E5%AD%A6.png',
+    link: 'https://www.mualliance.cn/archives/2799',
+    servers: {
+    },
+  },
+  {
+    id: 'SHZU',
+    name: '石河子大学Minecraft组织',
+    community: 'SHZU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/db/Shihezi_University_Logo.png/210px-Shihezi_University_Logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/db/Shihezi_University_Logo.png/210px-Shihezi_University_Logo.png',
+    link: 'https://www.mualliance.cn/archives/2890',
+    servers: {
+    },
+  },
+  {
+    id: 'NMU',
+    name: '北方民族大学Minecraft组织',
+    community: 'SHZU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d7/North_Minzu_University_logo.png/200px-North_Minzu_University_logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d7/North_Minzu_University_logo.png/200px-North_Minzu_University_logo.png',
+    link: 'https://www.mualliance.cn/archives/3002',
+    servers: {
+    },
+  },
+  {
+    id: 'LZUT',
+    name: '兰州理工大学MC发电社',
+    community: 'LZUT',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/2/28/Lanzhou_University_of_Technology_Logo.jpg/200px-Lanzhou_University_of_Technology_Logo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/2/28/Lanzhou_University_of_Technology_Logo.jpg/200px-Lanzhou_University_of_Technology_Logo.jpg',
+    link: 'https://www.mualliance.cn/archives/1168',
+    servers: {
+    },
+  },
+  {
+    id: 'XAI',
+    name: '西安航空学院MC社',
+    community: 'XAIMC',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/ed/Xi%27an_Aeronautical_Institute_logo.png/200px-Xi%27an_Aeronautical_Institute_logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/ed/Xi%27an_Aeronautical_Institute_logo.png/200px-Xi%27an_Aeronautical_Institute_logo.png',
+    link: 'https://www.mualliance.cn/archives/2554',
+    servers: {
+    },
+  },
+  {
+    id: 'YLU',
+    name: '方块榆苑Minecraft社',
+    community: 'YLU',
+    avatar: 'https://www.yulinu.edu.cn/images/xhtu.png',
+    avatar_university: 'https://www.yulinu.edu.cn/images/xhtu.png',
+    link: 'https://www.mualliance.cn/archives/2543',
+    servers: {
+    },
+  },
+  {
+    id: 'NWAFU',
+    name: '西农Minecraft工作室',
+    community: 'NWAFU',
+    avatar: 'https://zh.wikipedia.org/wiki/File:Northwest_A%26F_University.svg',
+    avatar_university: 'https://zh.wikipedia.org/wiki/File:Northwest_A%26F_University.svg',
+    link: 'https://www.mualliance.cn/archives/1532',
+    servers: {
+    },
+  },
+  {
+    id: 'CND',
+    name: '长安大学我的世界同好会',
+    community: 'CHDcraft',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/fb/ChdUniversityLogo.jpg/200px-ChdUniversityLogo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/f/fb/ChdUniversityLogo.jpg/200px-ChdUniversityLogo.jpg',
+    link: 'https://www.mualliance.cn/archives/1300',
+    servers: {
+    },
+  },
+  {
+    id: 'XATU',
+    name: '西安工业大学仙宫矿艺',
+    community: 'XATUCraft',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/9/99/Xi%27an_Technological_University_logo.jpg/200px-Xi%27an_Technological_University_logo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/9/99/Xi%27an_Technological_University_logo.jpg/200px-Xi%27an_Technological_University_logo.jpg',
+    link: 'https://www.mualliance.cn/archives/1164',
+    servers: {
+    },
+  },
+  {
+    id: 'CDUESTC',
+    name: '电子科技大学成都学院Minecraft同好会',
+    community: 'CDUESTC',
+    avatar: 'https://th.bing.com/th/id/R.663f3c992392e94771579a0f33ad2e7f?rik=YwZON3XkyLUk7Q&riu=http%3a%2f%2fi2.qhimg.com%2ft012c3276ce509ca9f2.jpg&ehk=W90DVkM5ueMbLwN6EvQJe4KLkA3zw934UbfsnJ824oM%3d&risl=&pid=ImgRaw&r=0',
+    avatar_university: 'https://th.bing.com/th/id/R.663f3c992392e94771579a0f33ad2e7f?rik=YwZON3XkyLUk7Q&riu=http%3a%2f%2fi2.qhimg.com%2ft012c3276ce509ca9f2.jpg&ehk=W90DVkM5ueMbLwN6EvQJe4KLkA3zw934UbfsnJ824oM%3d&risl=&pid=ImgRaw&r=0',
+    link: 'https://www.mualliance.cn/archives/3048',
+    servers: {
+    },
+  },
+  {
+    id: 'SCNU',
+    name: '海南师范大学电竞社沙盒分社',
+    community: 'SCNU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/ee/Hainan_Normal_University_logo.jpg/200px-Hainan_Normal_University_logo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/ee/Hainan_Normal_University_logo.jpg/200px-Hainan_Normal_University_logo.jpg',
+    link: 'https://www.mualliance.cn/archives/3016',
+    servers: {
+    },
+  },
+  {
+    id: 'GUT',
+    name: '桂林理工大学Minecraft校园服',
+    community: 'GUT',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/c/ca/Guilin_University_of_Technology_logo.png/200px-Guilin_University_of_Technology_logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/c/ca/Guilin_University_of_Technology_logo.png/200px-Guilin_University_of_Technology_logo.png',
+    link: 'https://www.mualliance.cn/archives/3043',
+    servers: {
+    },
+  },
+  {
+    id: 'GZHC',
+    name: '广州华立学院炎之动漫社MC部',
+    community: 'GZHC',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/6/68/Guangzhou_Huali_College_Logo.jpg/250px-Guangzhou_Huali_College_Logo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/6/68/Guangzhou_Huali_College_Logo.jpg/250px-Guangzhou_Huali_College_Logo.jpg',
+    link: 'https://www.mualliance.cn/archives/2683',
+    servers: {
+    },
+  },
+  {
+    id: 'GDUT',
+    name: '广东工业大学Minecraft组织',
+    community: 'GDUT',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/71/Guangdong_University_of_Technology_Logo.svg/200px-Guangdong_University_of_Technology_Logo.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/7/71/Guangdong_University_of_Technology_Logo.svg/200px-Guangdong_University_of_Technology_Logo.svg.png',
+    link: 'https://www.mualliance.cn/archives/2964',
+    servers: {
+    },
+  },
+  {
+    id: 'GU',
+    name: '广州大学虚拟协会mc部',
+    community: 'GU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/0/06/%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.png/250px-%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/0/06/%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.png/250px-%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%BE%BD.png',
+    link: 'https://www.mualliance.cn/archives/2980',
+    servers: {
+    },
+  },
+  {
+    id: 'SCNU',
+    name: '华南师范大学Minecraft组织',
+    community: 'SCNU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d0/SouthChinaNormalUniv_Logo.svg/200px-SouthChinaNormalUniv_Logo.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/d0/SouthChinaNormalUniv_Logo.svg/200px-SouthChinaNormalUniv_Logo.svg.png',
+    link: 'https://www.mualliance.cn/archives/2865',
+    servers: {
+    },
+  },
+  {
+    id: 'GZUCM',
+    name: '广州中医药大学绘梨衣Minecraft社',
+    community: 'GZUCM',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/de/Guangzhou_University_of_Chinese_Medicine_logo.svg/200px-Guangzhou_University_of_Chinese_Medicine_logo.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/d/de/Guangzhou_University_of_Chinese_Medicine_logo.svg/200px-Guangzhou_University_of_Chinese_Medicine_logo.svg.png',
+    link: 'https://www.mualliance.cn/archives/2605',
+    servers: {
+    },
+  },
+  {
+    id: 'HNU',
+    name: '湖南大学Minecraft组织',
+    community: 'HNU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/a/ad/Hunan_University_Logo_2020.svg/200px-Hunan_University_Logo_2020.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/a/ad/Hunan_University_Logo_2020.svg/200px-Hunan_University_Logo_2020.svg.png',
+    link: 'https://www.mualliance.cn/archives/3153',
+    servers: {
+    },
+  },
+  {
+    id: 'HBPU',
+    name: '湖北理工学院Minecraft组织',
+    community: 'HBPU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/a/a0/Hubei_Polytechnic_University_logo.jpg/200px-Hubei_Polytechnic_University_logo.jpg',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/a/a0/Hubei_Polytechnic_University_logo.jpg/200px-Hubei_Polytechnic_University_logo.jpg',
+    link: 'https://www.mualliance.cn/archives/2976',
+    servers: {
+    },
+  },
+  {
+    id: 'HUB',
+    name: '湖北大学Minecraft组织',
+    community: 'HBU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/b/be/Hubei_University_logo.svg/210px-Hubei_University_logo.svg.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/b/be/Hubei_University_logo.svg/210px-Hubei_University_logo.svg.png',
+    link: 'https://www.mualliance.cn/archives/2991',
+    servers: {
+    },
+  },
+  {
+    id: 'WTU',
+    name: '武汉纺织大学Minecraft组织',
+    community: 'WTU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/Wtu_logo.png/200px-Wtu_logo.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/Wtu_logo.png/200px-Wtu_logo.png',
+    link: 'https://www.mualliance.cn/archives/3163',
+    servers: {
+    },
+  },
+  {
+    id: 'YU',
+    name: '长江大学mc服务器',
+    community: 'YU',
+    avatar: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e5/Yangtze_univ.png/250px-Yangtze_univ.png',
+    avatar_university: 'https://upload.wikimedia.org/wikipedia/zh/thumb/e/e5/Yangtze_univ.png/250px-Yangtze_univ.png',
+    link: 'https://www.mualliance.cn/archives/2994',
+    servers: {
+    },
+  },
+
   // {
   //   id: '',
   //   name: '',
