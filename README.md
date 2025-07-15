@@ -23,6 +23,8 @@ See `src/styles/element/index.scss`
 # Development Plan
 
 - [ ] Query by ID
+- [ ] Add support for BedRock Edition
+- [ ] Auto Fetch new urls of orgs
 - [ ] Province Classification
 - [x] Integration with YuGaoLian Joint Server
     - [x] Template Design
