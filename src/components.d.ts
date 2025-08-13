@@ -36,6 +36,7 @@ declare module 'vue' {
     MUAServers: typeof import('./components/MUAServers.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ServerItem: typeof import('./components/ServerItem.vue')['default']
     Side: typeof import('./components/layouts/Side.vue')['default']
     SingleSiteServer: typeof import('./components/SingleSiteServer.vue')['default']
     StatusUpdate: typeof import('./components/StatusUpdate.vue')['default']
