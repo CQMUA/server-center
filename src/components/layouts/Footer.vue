@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-text">
-        2025 ©CQMUA | Open Source refers to <el-link href="https://github.com/CQMUA/CQMUA-MC-ServerCenter" target="_blank" underline>Github</el-link> | Wish you a good day!
+        2025 ©CQMUA | Open Source(MIT) refers to <el-link href="https://github.com/CQMUA/server-center" target="_blank" underline>Github</el-link> | Wish you a good day!
       </div>
       <div class="footer-icons">
         <el-icon></el-icon>
