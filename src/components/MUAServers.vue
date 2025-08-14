@@ -103,10 +103,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.muaservers {
-  opacity: 0.7;
-  transition: opacity 0.4s ease, filter 0.4s ease;
-}
+
 
 .muaservers:hover {
   filter: drop-shadow(0 0 3em #01ffea);
